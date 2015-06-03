@@ -111,4 +111,10 @@ alias hd='hexdump -C'
 _ssh_auth_save() {
     ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock"
 }
-alias tmux='_ssh_auth_save ; _zsh_tmux_plugin_run'
+case $HOST in
+    drop.transneptune.net)
+        ;;
+    *)
+        alias tmux='_ssh_auth_save ; _zsh_tmux_plugin_run'
+        ;;
+esac
