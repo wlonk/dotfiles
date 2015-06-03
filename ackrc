@@ -1,0 +1,2 @@
+--type-set=hbs=.hbs
+--ignore-dir=.tox

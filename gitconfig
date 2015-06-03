@@ -1,0 +1,75 @@
+[user]
+    name = Kit La Touche
+    email = kit@transneptune.net
+
+[core]
+    editor = vim
+	excludesfile = ~/.gitignore
+
+[color]
+    ui = true
+
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    cob = checkout -b
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+    ane = commit --amend --no-edit
+    aa = add --all
+    ff = merge --ff-only
+    puff = pull --ff-only
+    noff = merge --no-ff
+    fa = fetch --all
+    rup = remote update --prune
+    po = push origin
+    pom = push origin master --tags
+    pod = push origin develop
+    b = branch -vv
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+    sv = semver-tags
+    # for `hub`
+    pr = pull-request
+
+    # Divergence (commits we added and commits remote added)
+    div = divergence
+
+    # Fancy logging.
+    #   h = head
+    #   hp = head with patch
+    #   r = recent commits, only current branch
+    #   ra = recent commits, all reachable refs
+    #   l = all commits, only current branch
+    #   la = all commits, all reachable refs
+    head = !git l -1
+    h = !git head
+    hp = "!. ~/.githelpers && show_git_head"
+    r = !git l -20
+    ra = !git r --all
+    l = "!. ~/.githelpers && pretty_git_log"
+    la = !git l --all
+
+[advice]
+    detachedHead = true
+
+[push]
+    default = simple
+
+[merge]
+    defaultToUpstream = true
+    tool = vimdiff
+
+[branch]
+    autosetupmerge = always
+
+[rerere]
+    enabled = true
+
+[github]
+    user = wlonk
+
+[ghi]
+    token = !security find-internet-password -a wlonk -s github.com -l 'ghi token' -w
