@@ -1,3 +1,5 @@
 [dotfiles]
 repository = ~/dotfiles
-ignore = ['.vim']
+ignore = [
+    '.vim',
+    '.git']
