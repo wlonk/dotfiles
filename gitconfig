@@ -1,6 +1,6 @@
-[user]
-    name = Kit La Touche
-    email = kit@transneptune.net
+[include]
+    path = .gituser
+
 
 [core]
     editor = vim
