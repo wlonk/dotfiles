@@ -89,26 +89,15 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Python configuration
-" What follows is a horrible kludge to deal with the fact that work has 120
-" character lines, personal projects have 80. So we key off the hostname,
-" which is a reasonable approximation.
-let hostname = substitute(system('hostname'), '\n', '', '')
+augroup vimrc_autocmds
+    autocmd!
+    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType python match Excess /\%80v.*/
+    autocmd FileType python set nowrap
+augroup END
 
-if hostname == 'gorlois'
-    augroup vimrc_autocmds
-        autocmd!
-        autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-        autocmd FileType python match Excess /\%120v.*/
-        autocmd FileType python set nowrap
-    augroup END
-else
-    augroup vimrc_autocmds
-        autocmd!
-        autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-        autocmd FileType python match Excess /\%80v.*/
-        autocmd FileType python set nowrap
-    augroup END
-endif
+" Markdown configuration
+let g:vim_markdown_folding_style_pythonic = 1
 
 " Narrower yaml indents
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
@@ -143,14 +132,6 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
-
-" What follows is a horrible kludge to deal with the fact that work has 120
-" character lines, personal projects have 80. So we key off the hostname,
-" which is a reasonable approximation.
-let hostname = substitute(system('hostname'), '\n', '', '')
-if hostname == 'gorlois'
-    let g:pymode_options_max_line_length = 120
-endif
 
 " Let's use Jedi instead of Rope, but turn off the documentation window.
 let g:pymode_rope = 0
