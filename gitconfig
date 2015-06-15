@@ -1,7 +1,6 @@
 [include]
     path = .gituser
 
-
 [core]
     editor = vim
 	excludesfile = ~/.gitignore
