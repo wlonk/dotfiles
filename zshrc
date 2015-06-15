@@ -118,3 +118,7 @@ case $HOST in
         alias tmux='_ssh_auth_save ; _zsh_tmux_plugin_run'
         ;;
 esac
+
+if [[ -f .dev-env ]]; then
+    source .dev-env
+fi
