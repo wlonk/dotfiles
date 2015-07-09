@@ -39,6 +39,7 @@ Plugin 'nono/vim-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'raichoo/haskell-vim'
 Plugin 'rodjek/vim-puppet'
+Plugin 'tfnico/vim-gradle'
 Plugin 'wting/rust.vim'
 " Utilities
 Plugin 'alfredodeza/pytest.vim'
