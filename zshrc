@@ -113,6 +113,8 @@ _ssh_auth_save() {
 }
 case $HOST in
     drop.transneptune.net)
+        /usr/bin/keychain $HOME/.ssh/id_rsa
+        source $HOME/.keychain/$HOST-sh
         ;;
     *)
         alias tmux='_ssh_auth_save ; _zsh_tmux_plugin_run'
