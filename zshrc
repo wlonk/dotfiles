@@ -88,6 +88,8 @@ export PYTHONDONTWRITEBYTECODE=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/kit/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
+# Burn Java with Fire.
+export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
