@@ -100,6 +100,8 @@ augroup END
 
 " Markdown configuration
 let g:vim_markdown_folding_style_pythonic = 1
+" Spell check markdown files.
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Narrower yaml indents
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
