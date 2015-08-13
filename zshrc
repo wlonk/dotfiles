@@ -85,9 +85,9 @@ export PROJECT_HOME=$HOME/code
 export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 # For boot2docker on OS X only:
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/kit/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+if (( $+commands[docker-machine] )); then
+    eval $(docker-machine env default)
+fi
 # Burn Java with Fire.
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
