@@ -106,6 +106,7 @@ alias vup="vim +PluginInstall! +PluginClean! +qall"
 alias ll="ls -lFha"
 alias ffs='sudo !!'
 alias gir="yes doom"
+alias p="ipython || python"
 # `cat` with beautiful colors. requires Pygments installed.
 # pip install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'  
