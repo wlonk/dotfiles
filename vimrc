@@ -29,6 +29,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/argtextobj.vim'
 " Syntaxes
 Plugin 'digitaltoad/vim-jade'
 Plugin 'godlygeek/tabular'
