@@ -86,7 +86,12 @@ export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 # For boot2docker on OS X only:
 if (( $+commands[docker-machine] )); then
-    eval $(docker-machine env default)
+    _DOCKER_ENV=$(docker-machine env default)
+    if (( $? )); then
+        docker-machine start default
+        _DOCKER_ENV=$(docker-machine env default)
+    fi
+    eval $_DOCKER_ENV
 fi
 # Burn Java with Fire.
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
