@@ -181,6 +181,14 @@ let g:buffergator_suppress_keymaps = 1
 
 """" Mappings
 
+" Git checkpoint
+function! GitCheckpoint()
+    silent !git add --all
+    silent !git commit -m "wip: $(uuidgen)"
+    redraw!
+endfunction
+map <silent><leader>gc :call GitCheckpoint()<cr>
+
 " Show nerdtree
 map <silent><F2> :NERDTreeToggle<cr>
 
