@@ -23,7 +23,6 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'  " Must come after python-mode
-" Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-obsession'
@@ -188,9 +187,6 @@ function! GitCheckpoint()
     redraw!
 endfunction
 map <silent><leader>gc :call GitCheckpoint()<cr>
-
-" Show nerdtree
-map <silent><F2> :NERDTreeToggle<cr>
 
 " Show gundo
 nnoremap <F5> :GundoToggle<CR>
