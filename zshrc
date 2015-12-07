@@ -102,6 +102,7 @@ export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 alias v="vim"
 alias vi="vim"
 alias vs="vim -S"
+alias vo="vim -O"
 alias vup="vim +PluginInstall! +PluginClean! +qall"
 alias ll="ls -lFha"
 alias ffs='sudo !!'
