@@ -32,7 +32,7 @@ Plugin 'vim-scripts/argtextobj.vim'
 " Syntaxes
 Plugin 'digitaltoad/vim-jade'
 Plugin 'godlygeek/tabular'
-Plugin 'wlonk/vim-markdown'  " Must come after tabular
+Plugin 'plasticboy/vim-markdown'  " Must come after tabular
 Plugin 'groenewege/vim-less'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
