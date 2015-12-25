@@ -1,0 +1,12 @@
+Fabric
+Markdoc
+Pygments
+Sphinx
+cookiecutter
+dotfiles
+ipython
+pip-tools
+tox
+vboxapi
+virtualenvwrapper
+wheel
