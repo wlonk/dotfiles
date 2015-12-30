@@ -7,6 +7,7 @@
 alabaster==0.7.7          # via sphinx
 appnope==0.1.0            # via ipython
 argparse==1.4.0           # via markdoc, stevedore
+autopep8==1.2.1
 babel==2.1.1              # via sphinx
 binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
@@ -30,6 +31,7 @@ markupsafe==0.23          # via jinja2
 paramiko==1.16.0          # via fabric
 path.py==8.1.2            # via pickleshare
 pbr==1.8.1                # via stevedore
+pep8==1.6.2               # via autopep8
 pexpect==4.0.1            # via ipython
 pickleshare==0.5          # via ipython
 pip-tools==1.4.2
