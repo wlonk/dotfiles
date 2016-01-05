@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2015-05-11
+" Date:    2016-01-05
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -74,6 +74,7 @@ set fileencoding=utf-8
 set hlsearch
 set lazyredraw
 set number
+set pastetoggle=<F2>
 set shiftwidth=4
 set shortmess=I
 set showtabline=2
@@ -83,12 +84,6 @@ set tabstop=4
 " Let's see the line we're on
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
-
-" No arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
 
 " Python configuration
 augroup vimrc_autocmds
@@ -144,22 +139,6 @@ autocmd FileType python setlocal completeopt-=preview
 """" Ctrl-P (Better file opening)
 " With Buffergator, to better handle buffer-switching
 
-"""" NERDTree filtering
-let NERDTreeIgnore = [
-  \ '\~$',
-  \ '\.pyc$',
-  \ '\.git$',
-  \ '\.hg$',
-  \ '\.svn$',
-  \ '\.tox$',
-  \ 'tmp$',
-  \ 'node_modules$',
-  \ 'bower_components$',
-  \ 'dist$',
-  \ '_site$',
-  \ '*.egg-info$'
-\]
-
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](\.(git|hg|svn|tox)|tmp|node_modules|bower_components|dist|\_site|*.egg-info|htmlcov)$',
@@ -180,23 +159,38 @@ let g:buffergator_suppress_keymaps = 1
 
 """" Mappings
 
-" Git checkpoint
-function! GitCheckpoint()
-    silent !git add --all
-    silent !git commit -m "wip: $(uuidgen)"
-    redraw!
-endfunction
-map <silent><leader>gc :call GitCheckpoint()<cr>
+" No arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Let's get fancy. Change two fundamental mappings
+let mapleader=","
+nnoremap ; :
+
+" Convert to snake_case:
+nmap <silent><leader>sc :s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<cr>
+
+" Better paragraph wrapping.
+vmap Q gq
+nmap Q gqap
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Show gundo
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :GundoToggle<cr>
 
 " edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Clear last-search buffer
-nmap <silent><leader>cb :let @/ = ""<cr>
+nmap <silent><leader>cb :nohlsearch<cr>
 
 " Go to the previous buffer open
 nmap <silent><leader>jj :BuffergatorMruCyclePrev<cr>
@@ -234,3 +228,11 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+" Git checkpoint
+function! GitCheckpoint()
+    silent !git add --all
+    silent !git commit -m "wip: $(uuidgen)"
+    redraw!
+endfunction
+map <silent><leader>gc :call GitCheckpoint()<cr>
