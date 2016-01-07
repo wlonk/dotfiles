@@ -61,6 +61,7 @@ export VIRTUALENVWRAPPER_PYTHON=$(which python)
 plugins=(
     brew
     django
+    fabric
     git
     github
     osx
