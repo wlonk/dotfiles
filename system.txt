@@ -49,6 +49,7 @@ terminal-notifier
 the_silver_searcher
 tmux
 tree
+urlview
 vim
 watch
 watchman
