@@ -17,6 +17,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Functionality
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jeetsukumaran/vim-buffergator'
