@@ -29,6 +29,7 @@
     b = branch -vv
     ds = diff --stat=160,120
     dh1 = diff HEAD~1
+    # Requires semver, which is non-standard.
     sv = semver-tags
     # for `hub`
     pr = pull-request
