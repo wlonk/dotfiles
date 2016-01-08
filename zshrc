@@ -114,11 +114,6 @@ alias p="ipython || python"
 alias c='pygmentize -O style=monokai -f console256 -g'  
 alias hd='hexdump -C'
 
-git_checkpoint() {
-    git add --all
-    git commit -m "wip: $(uuidgen)"
-}
-
 _ssh_auth_save() {
     ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock"
 }

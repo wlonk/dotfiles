@@ -232,8 +232,8 @@ map <leader>n :call RenameFile()<cr>
 
 " Git checkpoint
 function! GitCheckpoint()
-    silent !git add --all
-    silent !git commit -m "wip: $(uuidgen)"
+    " Requires the git-checkpoint command defined in .gitconfig
+    silent !git checkpoint
     redraw!
 endfunction
 map <silent><leader>gc :call GitCheckpoint()<cr>
