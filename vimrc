@@ -37,6 +37,7 @@ Plugin 'plasticboy/vim-markdown'  " Must come after tabular
 Plugin 'groenewege/vim-less'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'tomlion/vim-solidity'
 " Plugin 'nono/vim-handlebars'
 " Plugin 'pangloss/vim-javascript'
 " Plugin 'raichoo/haskell-vim'
