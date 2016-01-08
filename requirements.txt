@@ -8,7 +8,7 @@ alabaster==0.7.7          # via sphinx
 appnope==0.1.0            # via ipython
 argparse==1.4.0           # via markdoc, stevedore
 autopep8==1.2.1
-babel==2.1.1              # via sphinx
+babel==2.2.0              # via sphinx
 binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
 cherrypy==4.0.0           # via markdoc
@@ -34,7 +34,7 @@ pbr==1.8.1                # via stevedore
 pep8==1.6.2               # via autopep8
 pexpect==4.0.1            # via ipython
 pickleshare==0.5          # via ipython
-pip-tools==1.4.2
+pip-tools==1.4.3
 pluggy==0.3.1             # via tox
 ptyprocess==0.5           # via pexpect
 py==1.4.31                # via tox

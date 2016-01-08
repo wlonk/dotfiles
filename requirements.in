@@ -8,6 +8,6 @@ dotfiles
 ipython
 pip-tools
 tox
-vboxapi
+vboxapi==1.0  # Specify version to avoid trouble finding this on PyPI.
 virtualenvwrapper
 wheel
