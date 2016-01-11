@@ -170,6 +170,7 @@ noremap <Right> <NOP>
 " Let's get fancy. Change two fundamental mappings
 let mapleader=","
 nnoremap ; :
+vnoremap ; :
 
 " Convert to snake_case:
 nmap <silent><leader>sc :s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<cr>
