@@ -35,7 +35,7 @@
     pr = pull-request
     # Checkpoint: save current state with a UUID for a commit message. Commit
     # early, commit often, interactive rebase, push late.
-    checkpoint = "!git add --all && git commit -m \"wip: $(uuidgen)\""
+    checkpoint = "!. ~/.githelpers && git_checkpoint"
     ch = !git checkpoint
 
     # Divergence (commits we added and commits remote added)

@@ -23,10 +23,12 @@ SUBJECT="%s"
 
 FORMAT="$HASH}$RELATIVE_TIME}$AUTHOR}$REFS $SUBJECT"
 
+
 show_git_head() {
     pretty_git_log -1
     git show -p --pretty="tformat:"
 }
+
 
 pretty_git_log() {
     WIDTH=$(tput cols)
@@ -39,4 +41,11 @@ pretty_git_log() {
         column -s '}' -t |
         # Page only if we need to
         less -FXRS
+}
+
+
+# And now I add my own git helper shell functions:
+git_checkpoint() {
+    git add --all
+    git commit --message "wip: $(uuidgen)"
 }
