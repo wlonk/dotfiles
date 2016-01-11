@@ -27,6 +27,7 @@
     pom = push origin master --tags
     pod = push origin develop
     b = branch -vv
+    ri = rebase --interactive
     ds = diff --stat=160,120
     dh1 = diff HEAD~1
     # Requires semver, which is non-standard.
