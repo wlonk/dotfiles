@@ -33,6 +33,7 @@ postgresql
 pstree
 pv
 pwgen
+pyenv
 pypy
 python
 python3
