@@ -78,7 +78,7 @@ set lazyredraw
 set number
 set pastetoggle=<F2>
 set shiftwidth=4
-set shortmess=I
+set shortmess=aIO
 set showtabline=2
 set softtabstop=4
 set tabstop=4
