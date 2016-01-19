@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2016-01-05
+" Date:    2016-01-19
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -16,40 +16,34 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Functionality
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ervandew/supertab'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'kien/ctrlp.vim'
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'  " Must come after python-mode
-Plugin 'sjl/gundo.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/argtextobj.vim'
+Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in gutter.
+Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
+Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
+Plugin 'kien/ctrlp.vim'                 " Best way to open files.
+Plugin 'klen/python-mode'               " Excellent Python language support.
+Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+                                        " ^^ Better vim status bar.
+Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
+Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
+Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
+Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than basic vim.
+Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
+Plugin 'vim-scripts/argtextobj.vim'     " Adds function arguments as text objects.
 " Syntaxes
-Plugin 'digitaltoad/vim-jade'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'  " Must come after tabular
-Plugin 'groenewege/vim-less'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tomlion/vim-solidity'
-" Plugin 'nono/vim-handlebars'
-" Plugin 'pangloss/vim-javascript'
-" Plugin 'raichoo/haskell-vim'
-" Plugin 'rodjek/vim-puppet'
-Plugin 'rust-lang/rust.vim'
-" Plugin 'tfnico/vim-gradle'
+Plugin 'digitaltoad/vim-jade'           " Syntax highlighting for the Jade templating language.
+Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
+Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
+Plugin 'groenewege/vim-less'            " Less-css syntax and tools.
+Plugin 'jelera/vim-javascript-syntax'   " JavaScript syntax and tools.
+Plugin 'kchmck/vim-coffee-script'       " CoffeeScript syntax and tools.
+Plugin 'nono/vim-handlebars'            " Handlebars syntax and tools.
+Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'tomlion/vim-solidity'           " Ethereum Solidity syntax and tools.
 " Utilities
-Plugin 'alfredodeza/pytest.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-fugitive'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-notes'
+Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
+Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
+Plugin 'tpope/vim-fugitive'             " Git integration tools.
 call vundle#end()
 
 " Turn filetype back on now that Vundle is done
@@ -65,6 +59,7 @@ filetype plugin indent on
 " Put your non-Plugin stuff after this line
 " ==============================================================================
 
+""""
 " First, some basics:
 syntax on
 colorscheme hybrid
@@ -75,6 +70,7 @@ set expandtab
 set fileencoding=utf-8
 set hlsearch
 set lazyredraw
+set noshowmode
 set number
 set pastetoggle=<F2>
 set shiftwidth=4
@@ -87,6 +83,7 @@ set tabstop=4
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
+""""
 " Python configuration
 augroup vimrc_autocmds
     autocmd!
@@ -95,21 +92,25 @@ augroup vimrc_autocmds
     autocmd FileType python set nowrap
 augroup END
 
+""""
 " Markdown configuration
 let g:vim_markdown_folding_style_pythonic = 1
 " Spell check markdown files.
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+""""
 " Narrower yaml indents
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
-"""" ack.vim searching
+""""
+" ack.vim searching
 " If we have ag (the Silver Searcher), let's use it.
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
-"""" Pymode
+""""
+" Pymode
 
 " Documentation
 let g:pymode_doc = 1
@@ -138,7 +139,8 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_rope = 0
 autocmd FileType python setlocal completeopt-=preview
 
-"""" Ctrl-P (Better file opening)
+""""
+" Ctrl-P (Better file opening)
 " With Buffergator, to better handle buffer-switching
 
 " Setup some default ignores
@@ -152,6 +154,7 @@ let g:ctrlp_custom_ignore = {
 " version control. It also supports works with .svn, .hg, .bzr.
 let g:ctrlp_working_path_mode = 'r'
 
+""""
 " Buffergator
 " Use the right side of the screen
 let g:buffergator_viewport_split_policy = 'R'
@@ -220,6 +223,9 @@ nmap <silent><leader>t <Esc>:Pytest file<cr>
 
 " Set filetype
 nmap <leader>ft <Esc>:set ft=
+
+""""
+" Custom functions
 
 " Rename current file
 function! RenameFile()
