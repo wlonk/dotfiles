@@ -1,5 +1,6 @@
 ack
 brew-cask
+chromedriver
 cmake
 coreutils
 curl
@@ -26,6 +27,7 @@ markdown
 memcached
 mysql
 nginx
+ngrok
 node
 openssl
 phantomjs
