@@ -23,7 +23,7 @@ first==2.0.1              # via pip-tools
 future==0.15.2            # via cookiecutter
 gnureadline==6.3.3        # via ipython
 ipython-genutils==0.1.0   # via traitlets
-ipython==4.0.1
+ipython==4.0.3
 jinja2==2.8               # via cookiecutter, markdoc, sphinx
 markdoc==0.6.6
 markdown==2.6.5           # via markdoc
@@ -31,31 +31,31 @@ markupsafe==0.23          # via jinja2
 paramiko==1.16.0          # via fabric
 path.py==8.1.2            # via pickleshare
 pbr==1.8.1                # via stevedore
-pep8==1.6.2               # via autopep8
+pep8==1.7.0               # via autopep8
 pexpect==4.0.1            # via ipython
-pickleshare==0.5          # via ipython
-pip-tools==1.4.3
+pickleshare==0.6          # via ipython
+pip-tools==1.4.5
 pluggy==0.3.1             # via tox
 ptyprocess==0.5           # via pexpect
 py==1.4.31                # via tox
 pycrypto==2.6.1           # via paramiko
-pygments==2.0.2
+pygments==2.1
 pytz==2015.7              # via babel
 pyyaml==3.11              # via markdoc
 ruamel.base==1.0.0        # via ruamel.yaml
 ruamel.ordereddict==0.4.9  # via ruamel.yaml
-ruamel.yaml==0.10.12      # via cookiecutter
+ruamel.yaml==0.10.17      # via cookiecutter
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pip-tools, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
 sphinx-rtd-theme==0.1.9   # via sphinx
-sphinx==1.3.3
+sphinx==1.3.4
 stevedore==1.10.0         # via virtualenvwrapper
 tox==2.3.1
-traitlets==4.0.0          # via ipython
-vboxapi==1.0
+traitlets==4.1.0          # via ipython
+# vboxapi==1.0
 virtualenv-clone==0.2.6   # via virtualenvwrapper
-virtualenv==13.1.2        # via tox, virtualenvwrapper
+virtualenv==14.0.1        # via tox, virtualenvwrapper
 virtualenvwrapper==4.7.1
 webob==1.5.1              # via markdoc
 wheel==0.26.0
