@@ -94,6 +94,11 @@ augroup vimrc_autocmds
 augroup END
 
 """"
+" Django templating language
+au FileType htmldjango inoremap {% {% %}<left><left><left>
+au FileType htmldjango inoremap {{ {{ }}<left><left><left>
+
+""""
 " Markdown configuration
 let g:vim_markdown_folding_style_pythonic = 1
 " Spell check markdown files.
@@ -107,6 +112,7 @@ autocmd FileType css  setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
 
 """"
 " ack.vim searching
