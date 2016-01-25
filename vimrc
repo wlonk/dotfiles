@@ -17,6 +17,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Functionality
 Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in gutter.
+Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
 Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
