@@ -71,6 +71,7 @@ set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
 set hlsearch
+set laststatus=2
 set lazyredraw
 set noshowmode
 set number
