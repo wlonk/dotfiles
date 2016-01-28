@@ -7,6 +7,7 @@ cookiecutter
 dotfiles
 ipython
 pip-tools
+powerline-status
 tox
 vboxapi==1.0  # Specify version to avoid trouble finding this on PyPI.
 virtualenvwrapper
