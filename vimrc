@@ -26,6 +26,7 @@ Plugin 'klen/python-mode'               " Excellent Python language support.
 Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
+Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only)
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
 Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
@@ -175,6 +176,12 @@ let g:buffergator_viewport_split_policy = 'R'
 
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
+
+""""
+" Dash docset mappings:
+"let g:dash_map = {
+"    \ 'rust' : 'rust'
+"\ }
 
 """" Mappings
 
