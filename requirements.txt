@@ -6,15 +6,15 @@
 #
 alabaster==0.7.7          # via sphinx
 appnope==0.1.0            # via ipython
-argparse==1.4.0           # via markdoc, stevedore
+argparse==1.4.0           # via markdoc
 autopep8==1.2.1
 babel==2.2.0              # via sphinx
 binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
-CherryPy==4.0.0
+CherryPy==5.0.1
 click==6.2                # via cookiecutter, pip-tools
 cookiecutter==1.3.0
-decorator==4.0.6          # via ipython, traitlets
+decorator==4.0.9          # via ipython, traitlets
 docutils==0.12            # via sphinx
 dotfiles==0.6.4
 ecdsa==0.13               # via paramiko
@@ -23,8 +23,8 @@ first==2.0.1              # via pip-tools
 future==0.15.2            # via cookiecutter
 gnureadline==6.3.3        # via ipython
 ipython-genutils==0.1.0   # via traitlets
-ipython==4.1.0
-jinja2==2.8               # via cookiecutter, markdoc, sphinx
+ipython==4.1.1
+Jinja2==2.8
 Markdoc==0.6.6
 Markdown==2.6.5
 MarkupSafe==0.23
@@ -34,7 +34,7 @@ pbr==1.8.1                # via stevedore
 pep8==1.7.0               # via autopep8
 pexpect==4.0.1            # via ipython
 pickleshare==0.6          # via ipython
-pip-tools==1.5
+pip-tools==1.6
 pluggy==0.3.1             # via tox
 powerline-status==2.3
 ptyprocess==0.5.1         # via pexpect
@@ -51,14 +51,14 @@ six==1.10.0               # via pip-tools, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
 sphinx-rtd-theme==0.1.9   # via sphinx
 Sphinx==1.3.5
-stevedore==1.10.0         # via virtualenvwrapper
+stevedore==1.11.0         # via virtualenvwrapper
 tox==2.3.1
 traitlets==4.1.0          # via ipython
 virtualenv-clone==0.2.6   # via virtualenvwrapper
-virtualenv==14.0.5        # via tox, virtualenvwrapper
+virtualenv==14.0.6        # via tox, virtualenvwrapper
 virtualenvwrapper==4.7.1
 webob==1.5.1              # via markdoc
-wheel==0.26.0
+wheel==0.29.0
 whichcraft==0.1.1         # via cookiecutter
 
 # The following packages are commented out because they are
