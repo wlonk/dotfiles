@@ -122,7 +122,10 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 alias hd='hexdump -C'
 
 _ssh_auth_save() {
-    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock"
+    SOCK_LINK="$HOME/.ssh/ssh-auth-sock"
+    if [[ -n $SSH_AUTH_SOCK && "$SSH_AUTH_SOCK" != "$SOCK_LINK" ]]; then
+        ln -sf "$SSH_AUTH_SOCK" "$SOCK_LINK"
+    fi
 }
 case $HOST in
     drop.transneptune.net)
