@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2016-01-19
+" Date:    2016-02-19
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -266,3 +266,11 @@ function! GitCheckpoint()
     redraw!
 endfunction
 map <silent><leader>gc :call GitCheckpoint()<cr>
+
+function! CopyMarkdownAsRichText()
+    let markdown = 'kramdown'
+    exec ':w !' . markdown .
+       \ '| textutil -stdin -inputencoding utf-8 -format html -convert rtf -stdout ' .
+       \ '| pbcopy'
+endfunction
+nmap <silent><leader>mk :call CopyMarkdownAsRichText()<cr>
