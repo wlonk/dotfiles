@@ -9,31 +9,45 @@
     ui = true
 
 [alias]
-    st = status
-    ci = commit
+    # Branch controls
     co = checkout
     cob = checkout -b
+    b = branch -vv
+
+    # What do things look like at the moment?
+    st = status
     di = diff
     dc = diff --cached
+    ds = diff --stat=160,120
+    dh1 = diff HEAD~1
+
+    # Make and rearrange commits
+    ci = commit
     amend = commit --amend
     ane = commit --amend --no-edit
     aa = add --all
+    ri = rebase --interactive
+
+    # Special merges:
     ff = merge --ff-only
     puff = pull --ff-only
     noff = merge --no-ff
+
+    # Update tracking info
     fa = fetch --all
     rup = remote update --prune
+
+    # Update remotes
     po = push origin
     pom = push origin master --tags
     pod = push origin develop
-    b = branch -vv
-    ri = rebase --interactive
-    ds = diff --stat=160,120
-    dh1 = diff HEAD~1
+
     # Requires semver, which is non-standard.
     sv = semver-tags
+
     # for `hub`
     pr = pull-request
+
     # Checkpoint: save current state with a UUID for a commit message. Commit
     # early, commit often, interactive rebase, push late.
     checkpoint = "!. ~/.githelpers && git_checkpoint"
