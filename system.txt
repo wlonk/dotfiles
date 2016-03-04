@@ -1,9 +1,11 @@
 ack
+android-platform-tools
 brew-cask
 chromedriver
 cmake
 coreutils
 curl
+diff-so-fancy
 docker
 docker-machine
 ethereum
