@@ -116,6 +116,7 @@ alias ll="ls -lFha"
 alias ffs='sudo !!'
 alias gir="yes doom"
 alias p="ipython || python"
+alias j="jobs"
 # `cat` with beautiful colors. requires Pygments installed.
 # pip install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'  
