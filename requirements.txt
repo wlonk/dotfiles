@@ -11,7 +11,7 @@ autopep8==1.2.2
 babel==2.2.0              # via sphinx
 binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
-CherryPy==5.0.1           # via markdoc
+CherryPy==5.1.0           # via markdoc
 click==6.3                # via cookiecutter, pip-tools
 cookiecutter==1.3.0
 decorator==4.0.9          # via ipython, traitlets
@@ -24,7 +24,7 @@ future==0.15.2            # via cookiecutter
 gnureadline==6.3.3        # via ipython
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.1.2
-jinja2==2.8               # via cookiecutter, markdoc, sphinx
+Jinja2==2.8               # via cookiecutter, markdoc, sphinx
 Markdoc==0.6.6
 Markdown==2.6.5           # via markdoc
 MarkupSafe==0.23          # via jinja2
@@ -40,11 +40,11 @@ powerline-status==2.3
 ptyprocess==0.5.1         # via pexpect
 py==1.4.31                # via tox
 pycrypto==2.6.1           # via paramiko
-Pygments==2.1.2           # via markdoc, sphinx
+Pygments==2.1.3           # via markdoc, sphinx
 pytz==2015.7              # via babel
 PyYAML==3.11              # via markdoc
 ruamel.ordereddict==0.4.9  # via ruamel.yaml
-ruamel.yaml==0.11.6       # via cookiecutter
+ruamel.yaml==0.11.7       # via cookiecutter
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pip-tools, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
@@ -54,7 +54,7 @@ stevedore==1.12.0         # via virtualenvwrapper
 tox==2.3.1
 traitlets==4.1.0          # via ipython
 virtualenv-clone==0.2.6   # via virtualenvwrapper
-virtualenv==14.0.6        # via tox, virtualenvwrapper
+virtualenv==15.0.0        # via tox, virtualenvwrapper
 virtualenvwrapper==4.7.1
 webob==1.5.1              # via markdoc
 wheel==0.29.0
