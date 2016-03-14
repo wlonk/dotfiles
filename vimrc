@@ -65,7 +65,7 @@ filetype plugin indent on
 """"
 " First, some basics:
 syntax on
-colorscheme hybrid
+colorscheme hybrid_reverse
 set autoindent
 set backspace=2
 set encoding=utf-8
