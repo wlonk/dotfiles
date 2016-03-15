@@ -18,10 +18,10 @@ Plugin 'gmarik/Vundle.vim'
 " Functionality
 Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in gutter.
 Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
+Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
 Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
-Plugin 'kien/ctrlp.vim'                 " Best way to open files.
 Plugin 'klen/python-mode'               " Excellent Python language support.
 Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
