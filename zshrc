@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 case $HOST in
     drop.transneptune.net)
-        ZSH_THEME="cloud"
+        ZSH_THEME="cypher"
         ;;
     *)
         ZSH_THEME="robbyrussell"
