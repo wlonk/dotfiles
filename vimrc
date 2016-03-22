@@ -75,6 +75,7 @@ set hlsearch
 set laststatus=2
 set lazyredraw
 set noshowmode
+set noswapfile
 set number
 set pastetoggle=<F2>
 set shiftwidth=4
@@ -82,6 +83,7 @@ set shortmess=aIO
 set showtabline=2
 set softtabstop=4
 set tabstop=4
+set ttyfast
 
 " Let's see the line we're on
 set cursorline
