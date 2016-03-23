@@ -73,6 +73,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Show background processes in prompt:
+export PROMPT="%(1j.%{$fg[yellow]%}<%j> .)$PROMPT"
+
 setopt autopushd
 
 # User configuration
