@@ -74,7 +74,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Show background processes in prompt:
-export PROMPT="%(1j.%{$fg[yellow]%}<%j> .)$PROMPT"
+export PROMPT="%(1j.%{$fg[yellow]%}<%j>%{$reset_color%} .)$PROMPT"
 
 setopt autopushd
 
