@@ -88,7 +88,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/code
 export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
-export RUST_BACKTRACE=1
 # For boot2docker on OS X only:
 if (( $+commands[docker-machine] )); then
     eval $(docker-machine env default &> /dev/null)
