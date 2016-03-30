@@ -8,6 +8,7 @@ curl
 diff-so-fancy
 docker
 docker-machine
+doctl
 ethereum
 exercism
 gcc
