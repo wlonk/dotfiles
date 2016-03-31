@@ -55,6 +55,7 @@ terminal-notifier
 the_silver_searcher
 tmux
 tree
+ttyrec
 urlview
 vim
 watch
