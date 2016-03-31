@@ -277,3 +277,13 @@ function! CopyMarkdownAsRichText()
        \ '| pbcopy'
 endfunction
 nmap <silent><leader>mk :call CopyMarkdownAsRichText()<cr>
+
+function! Incr()
+    let a = line('.') - line("'<")
+    let c = virtcol("'<")
+    if a > 0
+        execute 'normal! '.c.'|'.a."\<C-a>"
+    endif
+    normal `<
+endfunction
+vnoremap <C-i> :call Incr()<CR>
