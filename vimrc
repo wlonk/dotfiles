@@ -249,6 +249,12 @@ nmap <silent><leader>t <Esc>:Pytest file<cr>
 " Set filetype
 nmap <leader>ft <Esc>:set ft=
 
+" Custom vim-tmuxify actions for particular filetypes:
+if !exists('g:tmuxify_run')
+    let g:tmuxify_run = {}
+endif
+let g:tmuxify_run['rust'] = "cargo test"
+
 """"
 " Custom functions
 

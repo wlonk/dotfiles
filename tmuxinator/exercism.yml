@@ -28,10 +28,9 @@ root: ~/
 # post: tmux -CC attach -t exercism
 
 windows:
-  - editor:
-      layout: main-vertical
+  - rust:
+      root: Dropbox/exercism/rust/<%= @args[0] %>
+      layout: 9bdb,204x58,0,0{120x58,0,0,0,83x58,121,0,1}
       panes:
-        - vim
-        - guard
-  - server: bundle exec rails s
-  - logs: tail -f log/development.log
+        - vim +"TxSetPane exercism:1.2" src/lib.rs
+        - # empty
