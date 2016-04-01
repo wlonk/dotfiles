@@ -68,6 +68,7 @@ plugins=(
     pip
     python
     tmux
+    tmuxinator
     virtualenvwrapper
 )
 
