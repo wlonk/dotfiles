@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2016-02-19
+" Date:    2016-04-01
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -27,7 +27,8 @@ Plugin 'klen/python-mode'               " Excellent Python language support.
 Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
-Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only)
+Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
+Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
 Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
