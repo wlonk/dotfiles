@@ -70,6 +70,7 @@ syntax on
 colorscheme hybrid_reverse
 set autoindent
 set backspace=2
+set clipboard=unnamed
 set encoding=utf-8
 set expandtab
 set fileencoding=utf-8
