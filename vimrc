@@ -28,6 +28,7 @@ Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST 
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
+Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
 Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
@@ -105,6 +106,17 @@ augroup END
 " Django templating language
 au FileType htmldjango inoremap {% {% %}<left><left><left>
 au FileType htmldjango inoremap {{ {{ }}<left><left><left>
+augroup django_autocmds
+    autocmd!
+    autocmd FileType htmldjango let b:surround_{char2nr("v")} = "{{ \r }}"
+    autocmd FileType htmldjango let b:surround_{char2nr("{")} = "{{ \r }}"
+    autocmd FileType htmldjango let b:surround_{char2nr("%")} = "{% \r %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("b")} = "{% block \1block name: \1 %}\r{% endblock \1\1 %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("i")} = "{% if \1condition: \1 %}\r{% endif %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("w")} = "{% with \1with: \1 %}\r{% endwith %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("f")} = "{% for \1for loop: \1 %}\r{% endfor %}"
+    autocmd FileType htmldjango let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
+augroup END
 
 """"
 " Markdown configuration
@@ -114,6 +126,7 @@ autocmd FileType markdown setlocal spell
 
 """"
 " Narrower indents
+" (These don't have to be in an augroup, as repeating them has no effect.)
 autocmd FileType css        setlocal shiftwidth=2 tabstop=2
 autocmd FileType html       setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
@@ -296,3 +309,19 @@ function! Incr()
     normal `<
 endfunction
 vnoremap <C-i> :call Incr()<CR>
+
+" TODO: this is a decent starting point for an "open related tests" function.
+" fun! RelatedFile(file)
+"     #This is to check that the directory looks djangoish
+"     if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
+"         exec "edit %:h/" . a:file
+"         let g:last_relative_dir = expand("%:h") . '/'
+"         return ''
+"     endif
+"     if g:last_relative_dir != ''
+"         exec "edit " . g:last_relative_dir . a:file
+"         return ''
+"     endif
+"     echo "Cant determine where relative file is : " . a:file
+"     return ''
+" endfun
