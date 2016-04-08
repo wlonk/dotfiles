@@ -1,0 +1,8 @@
+session_name: exercism
+start_directory: "Dropbox/exercism/rust/${RUST_PROJECT}"
+windows:
+  - layout: 9bdb,204x58,0,0{120x58,0,0,0,83x58,121,0,1}
+    panes:
+      - shell_command: vim +"TxSetPane exercism:1.2" src/lib.rs
+        focus: true
+      - null

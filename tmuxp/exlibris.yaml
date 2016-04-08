@@ -1,0 +1,8 @@
+session_name: exlibris
+shell_command_before: workon ex-libris; clear
+windows:
+  - layout: 9bdb,204x58,0,0{120x58,0,0,0,83x58,121,0,1}
+    panes:
+      - shell_command: null
+        focus: true
+      - grunt serve
