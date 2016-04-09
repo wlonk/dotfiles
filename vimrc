@@ -86,6 +86,7 @@ set shiftwidth=4
 set shortmess=aIO
 set showtabline=2
 set softtabstop=4
+set switchbuf="usetab"
 set tabstop=4
 set ttyfast
 
