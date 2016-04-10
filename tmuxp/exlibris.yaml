@@ -1,7 +1,7 @@
 session_name: exlibris
 shell_command_before: workon ex-libris; clear
 windows:
-  - layout: 9bdb,204x58,0,0{120x58,0,0,0,83x58,121,0,1}
+  - layout: 5b06,204x58,0,0{165x58,0,0,1,38x58,166,0,2}
     panes:
       - shell_command: null
         focus: true
