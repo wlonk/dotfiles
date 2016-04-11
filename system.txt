@@ -62,3 +62,4 @@ watch
 watchman
 wget
 youtube-dl
+zsh
