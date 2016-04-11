@@ -86,6 +86,8 @@ set shiftwidth=4
 set shortmess=aIO
 set showtabline=2
 set softtabstop=4
+set splitbelow
+set splitright
 set switchbuf="usetab"
 set tabstop=4
 set ttyfast
@@ -274,6 +276,21 @@ let g:tmuxify_run['rust'] = "cargo test"
 """"
 " Custom functions
 
+" Create missing directories on write. Really shines in combo with the
+" auto-test-files function below.
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
 " Rename current file
 function! RenameFile()
     let old_name = expand('%')
@@ -293,6 +310,7 @@ function! GitCheckpoint()
 endfunction
 map <silent><leader>gc :call GitCheckpoint()<cr>
 
+" OS X only: copy a markdown buffer to the system clipboard as richtext.
 function! CopyMarkdownAsRichText()
     let markdown = 'kramdown'
     exec ':w !' . markdown .
@@ -301,6 +319,7 @@ function! CopyMarkdownAsRichText()
 endfunction
 nmap <silent><leader>mk :call CopyMarkdownAsRichText()<cr>
 
+" Increment a column of numbers, one after the other.
 function! Incr()
     let a = line('.') - line("'<")
     let c = virtcol("'<")
@@ -311,18 +330,24 @@ function! Incr()
 endfunction
 vnoremap <C-i> :call Incr()<CR>
 
-" TODO: this is a decent starting point for an "open related tests" function.
-" fun! RelatedFile(file)
-"     #This is to check that the directory looks djangoish
-"     if filereadable(expand("%:h"). '/models.py') || isdirectory(expand("%:h") . "/templatetags/")
-"         exec "edit %:h/" . a:file
-"         let g:last_relative_dir = expand("%:h") . '/'
-"         return ''
-"     endif
-"     if g:last_relative_dir != ''
-"         exec "edit " . g:last_relative_dir . a:file
-"         return ''
-"     endif
-"     echo "Cant determine where relative file is : " . a:file
-"     return ''
-" endfun
+" If we're in a Python file 'foo.py', open 'tests/foo.py'
+function RelatedTests()
+    let current_file = expand("%")
+    let path_components = split(current_file, '/')
+    let is_python = match(current_file, '.py$') != -1
+    let in_tests = match(current_file[-2], '^tests$') != -1
+
+    if !is_python || in_tests
+        return 'no tests'
+    end
+
+    let tests_path = path_components[:-2] + ['tests'] + path_components[-1:]
+    return join(tests_path, '/')
+endfunction
+function OpenRelatedTests()
+    let related_tests = RelatedTests()
+    if related_tests != ''
+        exec ':vsp ' . related_tests
+    end
+endfunction
+nnoremap <leader>. :call OpenRelatedTests()<cr>
