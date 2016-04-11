@@ -237,7 +237,7 @@ nnoremap <leader>ev :vsp $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " Clear last-search buffer
-nnoremap <cr> :nohlsearch<cr>
+nnoremap <space> :nohlsearch<cr>
 
 " Go to the previous buffer open
 nmap <silent><leader>jj :BuffergatorMruCyclePrev<cr>
