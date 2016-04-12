@@ -11,7 +11,7 @@ argcomplete==1.1.1        # via tmuxp
 argparse==1.4.0           # via markdoc
 arrow==0.7.0              # via jinja2-time
 autopep8==1.2.2
-babel==2.3.2              # via sphinx
+babel==2.3.3              # via sphinx
 binaryornot==0.4.0        # via cookiecutter
 chardet==2.3.0            # via binaryornot
 CherryPy==5.1.0           # via markdoc
@@ -22,7 +22,7 @@ decorator==4.0.9          # via ipython, traitlets
 docutils==0.12            # via sphinx
 dotfiles==0.6.4
 ecdsa==0.13               # via paramiko
-Fabric==1.10.2
+Fabric==1.11.1
 first==2.0.1              # via pip-tools
 future==0.15.2            # via cookiecutter
 gnureadline==6.3.3        # via ipython
@@ -30,14 +30,14 @@ imagesize==0.7.0          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.1.2
 jinja2-time==0.1.0        # via cookiecutter
-Jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
+jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
 kaptan==0.5.8             # via tmuxp
 Markdoc==0.6.6
 Markdown==2.6.6           # via markdoc
 MarkupSafe==0.23          # via jinja2
 paramiko==1.16.0          # via fabric
 pathlib2==2.1.0           # via pickleshare
-pbr==1.8.1                # via stevedore
+pbr==1.9.0                # via stevedore
 pep8==1.7.0               # via autopep8
 pexpect==4.0.1            # via ipython
 pickleshare==0.7.2        # via ipython
@@ -55,7 +55,7 @@ PyYAML==3.11              # via kaptan, markdoc
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pathlib2, pip-tools, python-dateutil, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
-Sphinx==1.4
+Sphinx==1.4.1
 stevedore==1.12.0         # via virtualenvwrapper
 tmuxp==0.11.0
 tox==2.3.1
