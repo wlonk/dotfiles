@@ -45,6 +45,7 @@ Plugin 'groenewege/vim-less'             " Less-css syntax and tools.
 Plugin 'jelera/vim-javascript-syntax'    " JavaScript syntax and tools.
 Plugin 'kchmck/vim-coffee-script'        " CoffeeScript syntax and tools.
 Plugin 'nono/vim-handlebars'             " Handlebars syntax and tools.
+Plugin 'racer-rust/vim-racer'            " Rust auto-completer. Requires command line tool racer.
 Plugin 'rust-lang/rust.vim'              " Rust syntax and tools.
 Plugin 'tomlion/vim-solidity'            " Ethereum Solidity syntax and tools.
 " Utilities

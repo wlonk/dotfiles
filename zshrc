@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Put this before the plugins, so they use the correct PATH.
-export PATH=$HOME/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/code/android-sdk-macosx/tools:$PATH
+export PATH=$HOME/bin:/$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/code/android-sdk-macosx/tools:$PATH
 # Define this before we load the virtualenvwrapper plugin, so that it will use
 # the right Python.
 export VIRTUALENVWRAPPER_PYTHON=$(which python)
@@ -89,6 +89,7 @@ export PROJECT_HOME=$HOME/code
 export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 export DISABLE_AUTO_TITLE=true
+export RUST_SRC_PATH=$HOME/code/rust/src
 # For boot2docker on OS X only:
 if (( $+commands[docker-machine] )); then
     eval $(docker-machine env default &> /dev/null)
