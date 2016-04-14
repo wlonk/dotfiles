@@ -69,30 +69,38 @@ filetype plugin indent on
 
 """"
 " First, some basics:
-syntax on
-colorscheme hybrid_reverse
-set autoindent
-set backspace=2
-set clipboard=unnamed
-set encoding=utf-8
-set expandtab
-set fileencoding=utf-8
-set hlsearch
-set laststatus=2
-set lazyredraw
-set noshowmode
-set noswapfile
-set number
-set pastetoggle=<F2>
-set shiftwidth=4
-set shortmess=aIO
-set showtabline=2
-set softtabstop=4
-set splitbelow
-set splitright
-set switchbuf="usetab"
-set tabstop=4
-set ttyfast
+syntax on                                " Enable synax highlighting.
+colorscheme hybrid_reverse               " A color scheme I like.
+set autoindent                           " Smart indent on newline.
+set backspace=2                          " More powerful backspace (works on space-tabs).
+set clipboard=unnamed                    " Default to system clipboard.
+set encoding=utf-8                       " A more elegant encoding for a more civilized age.
+set expandtab                            " Turn tabs into spaces.
+set fileencoding=utf-8                   " A more elegant encoding for a more civilized age.
+set hidden                               " Allow hiding buffers without saving all changes.
+set hlsearch                             " Highlight search matches.
+set laststatus=2                         " Make the status bar show a bit less.
+set lazyredraw                           " Only redraw when you have to (helps with flickering).
+set noshowmode                           " Don't need to show mode, we have POWERLINE.
+set noswapfile                           " Don't write those pesky .*.swp files.
+set number                               " Show linenumbers in leftmost column.
+set pastetoggle=<F2>                     " Use F2 to toggle paste mode.
+set shiftwidth=4                         " By default, make tabs 4 spaces.
+set shortmess=aIO                        " Configure status-line messages:
+                                         "  - a: use shorter versions of all basic messages,
+                                         "       to conserve screen real estate.
+                                         "  - I: Don't show the "this is vim" intro message on
+                                         "       startup.
+                                         "  - O: Overwrite previous messages when reading a
+                                         "       file.
+set showtabline=2                        " Show all open tabs at the top, always.
+set softtabstop=4                        " Again, tabs are 4 spaces.
+set splitbelow                           " Open splits below current window.
+set splitright                           " Open vsplits to right of current window.
+set switchbuf="usetab"                   " When jumping to a buffer, use the existing buffer and
+                                         " tab, if available.
+set tabstop=4                            " Tabs. Are. Four. Spaces.
+set ttyfast                              " Convince vim it has a fast connection to the TTY.
 
 " Let's see the line we're on
 set cursorline
