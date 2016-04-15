@@ -1,0 +1,16 @@
+session_name: ddd
+shell_command_before: workon datadrivendota; clear
+windows:
+- focus: true
+  layout: 84c4,204x57,0,0{127x57,0,0,1,43x57,128,0[43x28,128,0,5,43x28,128,29,6],32x57,172,0[32x18,172,0,2,32x19,172,19,3,32x18,172,39,4]}
+  window_name: datadrivendota
+  panes:
+  - focus: true
+    shell_command: null
+  - heroku local parsing_worker
+  - shell_command:
+    - cd /Users/kit/code/replay_parser
+    - heroku local web
+  - python datadrivendota/manage.py runserver
+  - heroku local worker
+  - grunt
