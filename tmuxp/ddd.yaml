@@ -2,7 +2,7 @@ session_name: ddd
 shell_command_before: workon datadrivendota; clear
 windows:
 - focus: true
-  layout: 84c4,204x57,0,0{127x57,0,0,1,43x57,128,0[43x28,128,0,5,43x28,128,29,6],32x57,172,0[32x18,172,0,2,32x19,172,19,3,32x18,172,39,4]}
+  layout: 0be8,204x58,0,0{126x58,0,0,1,38x58,127,0[38x29,127,0,2,38x28,127,30,3],38x58,166,0[38x19,166,0,4,38x19,166,20,5,38x18,166,40,6]}
   window_name: datadrivendota
   panes:
   - focus: true
