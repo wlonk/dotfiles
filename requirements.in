@@ -8,6 +8,7 @@ dotfiles
 ipython
 pip-tools
 powerline-status
+requests
 tmuxp
 tox
 virtualenvwrapper
