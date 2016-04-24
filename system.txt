@@ -63,3 +63,11 @@ watchman
 wget
 youtube-dl
 zsh
+
+# For the Python package `newspaper`
+libxml2
+libxslt
+libtiff
+libjpeg
+webp
+little-cms2
