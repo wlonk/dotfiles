@@ -36,7 +36,7 @@ Plugin 'tpope/vim-commentary'            " Adds comments as text objects.
 Plugin 'tpope/vim-obsession'             " Save and restore vim sessions easily.
 Plugin 'tpope/vim-repeat'                " Repeat some more complex actions than basic vim.
 Plugin 'tpope/vim-surround'              " Manage surrounding quotes, parens, brackets, and braces.
-Plugin 'vim-scripts/argtextobj.vim'      " Adds function arguments as text objects.
+Plugin 'wlonk/argtextobj.vim'            " Adds function arguments as text objects. (Using my own fork.)
 " Syntaxes
 Plugin 'digitaltoad/vim-jade'            " Syntax highlighting for the Jade templating language.
 Plugin 'godlygeek/tabular'               " Automatic formatting of Markdown tables.
