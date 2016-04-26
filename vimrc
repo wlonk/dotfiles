@@ -39,6 +39,7 @@ Plugin 'tpope/vim-surround'              " Manage surrounding quotes, parens, br
 Plugin 'wlonk/argtextobj.vim'            " Adds function arguments as text objects. (Using my own fork.)
 " Syntaxes
 Plugin 'digitaltoad/vim-jade'            " Syntax highlighting for the Jade templating language.
+Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'               " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'         " Markdown syntax and tools. MUST come after tabular.
 Plugin 'groenewege/vim-less'             " Less-css syntax and tools.
@@ -149,6 +150,8 @@ autocmd FileType less            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
+
+autocmd BufNewFile,BufRead *.njk set filetype=jinja
 
 """"
 " ack.vim searching
