@@ -117,9 +117,14 @@ augroup vimrc_autocmds
 augroup END
 
 """"
+" Jinja and Nunjucks config
+autocmd BufNewFile,BufRead *.njk set filetype=jinja
+
+""""
 " Django templating language
-au FileType htmldjango inoremap {% {% %}<left><left><left>
-au FileType htmldjango inoremap {{ {{ }}<left><left><left>
+autocmd BufNewFile,BufRead *.html set filetype=htmldjango
+autocmd FileType htmldjango inoremap {% {% %}<left><left><left>
+autocmd FileType htmldjango inoremap {{ {{ }}<left><left><left>
 augroup django_autocmds
     autocmd!
     autocmd FileType htmldjango let b:surround_{char2nr("v")} = "{{ \r }}"
@@ -150,8 +155,6 @@ autocmd FileType less            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
-
-autocmd BufNewFile,BufRead *.njk set filetype=jinja
 
 """"
 " ack.vim searching
