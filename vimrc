@@ -334,7 +334,7 @@ function! CopyMarkdownAsRichText()
        \ '| textutil -stdin -inputencoding utf-8 -format html -convert rtf -stdout ' .
        \ '| pbcopy'
 endfunction
-nmap <silent><leader>mk :call CopyMarkdownAsRichText()<cr>
+nmap <silent><leader>mkc :call CopyMarkdownAsRichText()<cr>
 
 " Increment a column of numbers, one after the other.
 function! Incr()
