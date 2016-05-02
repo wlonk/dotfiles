@@ -3,6 +3,7 @@ Markdoc
 Pygments
 Sphinx
 autopep8
+awscli
 cookiecutter
 dotfiles
 ipython
