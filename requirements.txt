@@ -5,17 +5,17 @@
 #    pip-compile --output-file requirements.txt requirements.in
 #
 
-alabaster==0.7.7          # via sphinx
+alabaster==0.7.8          # via sphinx
 appnope==0.1.0            # via ipython
 argcomplete==1.1.1        # via tmuxp
 argparse==1.4.0           # via markdoc
 arrow==0.7.0              # via jinja2-time
 autopep8==1.2.2
-awscli==1.10.25
+awscli==1.10.26
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.16          # via awscli, s3transfer
+botocore==1.4.17          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
 CherryPy==5.3.0           # via markdoc
 click==6.6                # via cookiecutter, pip-tools
@@ -34,7 +34,7 @@ imagesize==0.7.1          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.2.0
 jinja2-time==0.1.0        # via cookiecutter
-Jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
+jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
 jmespath==0.9.0           # via botocore
 kaptan==0.5.8             # via tmuxp
 Markdoc==0.6.6
@@ -65,7 +65,7 @@ simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pathlib2, pip-tools, python-dateutil, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
 Sphinx==1.4.1
-stevedore==1.12.0         # via virtualenvwrapper
+stevedore==1.13.0         # via virtualenvwrapper
 tmuxp==0.11.0
 tox==2.3.1
 traitlets==4.2.1          # via ipython
