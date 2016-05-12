@@ -43,7 +43,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'               " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'         " Markdown syntax and tools. MUST come after tabular.
 Plugin 'groenewege/vim-less'             " Less-css syntax and tools.
-Plugin 'jelera/vim-javascript-syntax'    " JavaScript syntax and tools.
+Plugin 'pangloss/vim-javascript'         " JavaScript syntax and tools.
 Plugin 'kchmck/vim-coffee-script'        " CoffeeScript syntax and tools.
 Plugin 'nono/vim-handlebars'             " Handlebars syntax and tools.
 Plugin 'racer-rust/vim-racer'            " Rust auto-completer. Requires command line tool racer.
