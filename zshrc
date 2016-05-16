@@ -92,7 +92,7 @@ export DISABLE_AUTO_TITLE=true
 export RUST_SRC_PATH=$HOME/code/rust/src
 # For docker on OS X only:
 if (( $+commands[docker-machine] )); then
-    eval $(docker-machine env default)
+    eval $(docker-machine env default 2> /dev/null)
 fi
 # Burn Java with Fire.
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
