@@ -11,6 +11,7 @@ docker-machine
 doctl
 ethereum
 exercism
+fswatch
 gcc
 geoip
 gettext
