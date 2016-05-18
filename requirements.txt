@@ -11,11 +11,11 @@ argcomplete==1.1.1        # via tmuxp
 argparse==1.4.0           # via markdoc
 arrow==0.7.0              # via jinja2-time
 autopep8==1.2.2
-awscli==1.10.28
+awscli==1.10.30
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.19          # via awscli, s3transfer
+botocore==1.4.20          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
 CherryPy==5.4.0           # via markdoc
 click==6.6                # via cookiecutter, pip-tools
