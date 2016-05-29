@@ -25,6 +25,7 @@ hexedit
 httpie
 hub
 imagemagick
+jq
 keybase
 lynx
 markdown
