@@ -7,15 +7,15 @@
 
 alabaster==0.7.8          # via sphinx
 appnope==0.1.0            # via ipython
-argcomplete==1.1.1        # via tmuxp
+argcomplete==1.2.0        # via tmuxp
 argparse==1.4.0           # via markdoc
 arrow==0.7.0              # via jinja2-time
-autopep8==1.2.2
-awscli==1.10.30
+autopep8==1.2.4
+awscli==1.10.34
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.20          # via awscli, s3transfer
+botocore==1.4.24          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
 CherryPy==5.4.0           # via markdoc
 click==6.6                # via cookiecutter, pip-tools
@@ -34,22 +34,23 @@ imagesize==0.7.1          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.2.0
 jinja2-time==0.1.0        # via cookiecutter
-Jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
+jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
 jmespath==0.9.0           # via botocore
 kaptan==0.5.8             # via tmuxp
+libtmux==0.4.1            # via tmuxp
 Markdoc==0.6.6
 Markdown==2.6.6           # via markdoc
 MarkupSafe==0.23          # via jinja2
 paramiko==1.17.0          # via fabric
 pathlib2==2.1.0           # via pickleshare
-pbr==1.9.1                # via stevedore
+pbr==1.10.0               # via stevedore
 pep8==1.7.0               # via autopep8
-pexpect==4.0.1            # via ipython
+pexpect==4.1.0            # via ipython
 pickleshare==0.7.2        # via ipython
 pip-tools==1.6.5
 pluggy==0.3.1             # via tox
 powerline-status==2.4
-poyo==0.2.0               # via cookiecutter
+poyo==0.4.0               # via cookiecutter
 ptyprocess==0.5.1         # via pexpect
 py==1.4.31                # via tox
 pyasn1==0.1.9             # via rsa
@@ -59,20 +60,20 @@ python-dateutil==2.5.3    # via arrow, botocore
 pytz==2016.4              # via babel
 PyYAML==3.11              # via kaptan, markdoc
 requests==2.10.0
-rsa==3.3                  # via awscli
+rsa==3.4.2                # via awscli
 s3transfer==0.0.1         # via awscli
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pathlib2, pip-tools, python-dateutil, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
-Sphinx==1.4.1
-stevedore==1.13.0         # via virtualenvwrapper
-tmuxp==0.11.0
+Sphinx==1.4.2
+stevedore==1.14.0         # via virtualenvwrapper
+tmuxp==1.0.2
 tox==2.3.1
 traitlets==4.2.1          # via ipython
 virtualenv-clone==0.2.6   # via virtualenvwrapper
-virtualenv==15.0.1        # via tox, virtualenvwrapper
+virtualenv==15.0.2        # via tox, virtualenvwrapper
 virtualenvwrapper==4.7.1
-webob==1.6.0              # via markdoc
+webob==1.6.1              # via markdoc
 wheel==0.29.0
 whichcraft==0.4.0         # via cookiecutter
 
