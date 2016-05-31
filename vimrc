@@ -38,7 +38,7 @@ Plugin 'tpope/vim-repeat'                " Repeat some more complex actions than
 Plugin 'tpope/vim-surround'              " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'wlonk/argtextobj.vim'            " Adds function arguments as text objects. (Using my own fork.)
 " Syntaxes
-Plugin 'digitaltoad/vim-jade'            " Syntax highlighting for the Jade templating language.
+Plugin 'digitaltoad/vim-pug'             " Syntax highlighting for the Pug templating language.
 Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'               " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'         " Markdown syntax and tools. MUST come after tabular.
@@ -151,6 +151,7 @@ autocmd FileType html            setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango      setlocal shiftwidth=2 tabstop=2
 autocmd FileType handlebars.html setlocal shiftwidth=2 tabstop=2
 autocmd FileType jade            setlocal shiftwidth=2 tabstop=2
+autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript      setlocal shiftwidth=2 tabstop=2
 autocmd FileType less            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
