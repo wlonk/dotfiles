@@ -8,19 +8,19 @@
 alabaster==0.7.8          # via sphinx
 appnope==0.1.0            # via ipython
 argparse==1.4.0           # via markdoc
-arrow==0.7.0              # via jinja2-time
+arrow==0.8.0              # via jinja2-time
 autopep8==1.2.4
-awscli==1.10.35
+awscli==1.10.38
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.25          # via awscli, s3transfer
+botocore==1.4.28          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
-cherrypy==5.5.0           # via markdoc
+cherrypy==6.0.1           # via markdoc
 click==6.6                # via cookiecutter, pip-tools, tmuxp
-colorama==0.3.3           # via awscli, tmuxp
+colorama==0.3.7           # via awscli, tmuxp
 cookiecutter==1.4.0
-decorator==4.0.9          # via ipython, traitlets
+decorator==4.0.10         # via ipython, traitlets
 docutils==0.12            # via awscli, botocore, sphinx
 dotfiles==0.6.4
 ecdsa==0.13               # via paramiko
@@ -32,15 +32,15 @@ gnureadline==6.3.3        # via ipython
 imagesize==0.7.1          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.2.0
-jinja2-time==0.1.0        # via cookiecutter
+jinja2-time==0.2.0        # via cookiecutter
 jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
 jmespath==0.9.0           # via botocore
 kaptan==0.5.8             # via tmuxp
-libtmux==0.4.1            # via tmuxp
+libtmux==0.5.0            # via tmuxp
 markdoc==0.6.6
 markdown==2.6.6           # via markdoc
 markupsafe==0.23          # via jinja2
-paramiko==1.17.0          # via fabric
+paramiko==2.0.0           # via fabric
 pathlib2==2.1.0           # via pickleshare
 pbr==1.10.0               # via stevedore
 pep8==1.7.0               # via autopep8
@@ -64,9 +64,9 @@ s3transfer==0.0.1         # via awscli
 simplegeneric==0.8.1      # via ipython
 six==1.10.0               # via pathlib2, pip-tools, python-dateutil, sphinx, stevedore
 snowballstemmer==1.2.1    # via sphinx
-sphinx==1.4.3
-stevedore==1.14.0         # via virtualenvwrapper
-tmuxp==1.1.1
+sphinx==1.4.4
+stevedore==1.15.0         # via virtualenvwrapper
+tmuxp==1.2.0
 tox==2.3.1
 traitlets==4.2.1          # via ipython
 virtualenv-clone==0.2.6   # via virtualenvwrapper
