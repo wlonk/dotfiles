@@ -16,15 +16,16 @@ backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
 botocore==1.4.28          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
-cherrypy==6.0.1           # via markdoc
+CherryPy==6.0.1           # via markdoc
 click==6.6                # via cookiecutter, pip-tools, tmuxp
-colorama==0.3.7           # via awscli, tmuxp
+colorama==0.3.3           # via awscli, tldr, tmuxp
 cookiecutter==1.4.0
 decorator==4.0.10         # via ipython, traitlets
 docutils==0.12            # via awscli, botocore, sphinx
 dotfiles==0.6.4
 ecdsa==0.13               # via paramiko
-fabric==1.11.1
+Fabric==1.11.1
+fancycompleter==0.5       # via pdbpp
 first==2.0.1              # via pip-tools
 future==0.15.2            # via cookiecutter
 futures==3.0.5            # via s3transfer
@@ -33,16 +34,18 @@ imagesize==0.7.1          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
 ipython==4.2.0
 jinja2-time==0.2.0        # via cookiecutter
-jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
+Jinja2==2.8               # via cookiecutter, jinja2-time, markdoc, sphinx
 jmespath==0.9.0           # via botocore
 kaptan==0.5.8             # via tmuxp
-libtmux==0.5.0            # via tmuxp
-markdoc==0.6.6
-markdown==2.6.6           # via markdoc
-markupsafe==0.23          # via jinja2
-paramiko==2.0.0           # via fabric
+libtmux==0.5              # via tmuxp
+Markdoc==0.6.6
+Markdown==2.6.6           # via markdoc
+MarkupSafe==0.23          # via jinja2
+ordereddict==1.1          # via pdbpp
+paramiko==1.17.0          # via fabric
 pathlib2==2.1.0           # via pickleshare
 pbr==1.10.0               # via stevedore
+pdbpp==0.8.3
 pep8==1.7.0               # via autopep8
 pexpect==4.1.0            # via ipython
 pickleshare==0.7.2        # via ipython
@@ -54,18 +57,21 @@ ptyprocess==0.5.1         # via pexpect
 py==1.4.31                # via tox
 pyasn1==0.1.9             # via rsa
 pycrypto==2.6.1           # via paramiko
-pygments==2.1.3
+Pygments==2.1.3           # via markdoc, pdbpp, sphinx
+pyrepl==0.8.4             # via fancycompleter
 python-dateutil==2.5.3    # via arrow, botocore
 pytz==2016.4              # via babel
-pyyaml==3.11              # via kaptan, markdoc
+PyYAML==3.11              # via kaptan, markdoc
 requests==2.10.0
 rsa==3.4.2                # via awscli
 s3transfer==0.0.1         # via awscli
 simplegeneric==0.8.1      # via ipython
-six==1.10.0               # via pathlib2, pip-tools, python-dateutil, sphinx, stevedore
+six==1.10.0               # via cherrypy, pathlib2, pip-tools, python-dateutil, sphinx, stevedore, tldr
 snowballstemmer==1.2.1    # via sphinx
-sphinx==1.4.4
+Sphinx==1.4.4
 stevedore==1.15.0         # via virtualenvwrapper
+termcolor==1.1.0          # via tldr
+tldr==0.2
 tmuxp==1.2.0
 tox==2.3.1
 traitlets==4.2.1          # via ipython
@@ -75,6 +81,7 @@ virtualenvwrapper==4.7.1
 webob==1.6.1              # via markdoc
 wheel==0.29.0
 whichcraft==0.4.0         # via cookiecutter
+wmctrl==0.3               # via pdbpp
 
 # The following packages are commented out because they are
 # considered to be unsafe in a requirements file:

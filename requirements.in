@@ -7,9 +7,11 @@ awscli
 cookiecutter
 dotfiles
 ipython
+pdbpp
 pip-tools
 powerline-status
 requests
+tldr
 tmuxp
 tox
 virtualenvwrapper
