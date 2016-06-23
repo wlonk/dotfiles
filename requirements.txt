@@ -10,11 +10,11 @@ appnope==0.1.0            # via ipython
 argparse==1.4.0           # via markdoc
 arrow==0.8.0              # via jinja2-time
 autopep8==1.2.4
-awscli==1.10.38
+awscli==1.10.40
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.28          # via awscli, s3transfer
+botocore==1.4.30          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
 CherryPy==6.0.1           # via markdoc
 click==6.6                # via cookiecutter, pip-tools, tmuxp
@@ -42,7 +42,7 @@ Markdoc==0.6.6
 Markdown==2.6.6           # via markdoc
 MarkupSafe==0.23          # via jinja2
 ordereddict==1.1          # via pdbpp
-paramiko==1.17.0          # via fabric
+paramiko==1.17.1          # via fabric
 pathlib2==2.1.0           # via pickleshare
 pbr==1.10.0               # via stevedore
 pdbpp==0.8.3
