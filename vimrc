@@ -175,6 +175,7 @@ let g:pymode_doc_key = 'K'
 
 " Linting
 let g:pymode_lint = 1
+let g:pymode_lint_ignore = "W503"
 
 " Auto check on save
 let g:pymode_lint_write = 1
