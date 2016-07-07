@@ -116,6 +116,7 @@ alias vi="vim"
 alias vs="vim -S"
 alias vo="vim -O"
 alias vup="vim +PluginInstall! +PluginClean! +qall"
+alias buvu="bubu && vup"
 alias ll="ls -lFha"
 alias ffs='sudo !!'
 alias gir="yes doom"
