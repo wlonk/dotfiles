@@ -162,6 +162,11 @@ autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
 
 """"
+" Handlebars abbreviations
+" {{# etc.
+let g:mustache_abbreviations = 1
+
+""""
 " ack.vim searching
 " If we have ag (the Silver Searcher), let's use it.
 if executable('ag')
