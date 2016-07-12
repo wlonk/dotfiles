@@ -16,44 +16,46 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Functionality
-Plugin 'airblade/vim-gitgutter'          " Show git add/delete/change per line in gutter.
-Plugin 'alvan/vim-closetag'              " If I open an HTML tag, I want to close it, alright?
-Plugin 'christoomey/vim-sort-motion'     " Sort text objects.
-Plugin 'ctrlpvim/ctrlp.vim'              " Best way to open files.
-Plugin 'ervandew/supertab'               " Generic tab completion.
-Plugin 'flazz/vim-colorschemes'          " Provides the hybrid color scheme I like.
-Plugin 'jeetsukumaran/vim-buffergator'   " Better management of buffers.
-Plugin 'klen/python-mode'                " Excellent Python language support.
-Plugin 'davidhalter/jedi-vim'            " Python autocomplete and linters. MUST come after python-mode.
+Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in gutter.
+Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
+Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
+Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
+Plugin 'ervandew/supertab'              " Generic tab completion.
+Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
+Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
+Plugin 'klen/python-mode'               " Excellent Python language support.
+Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-                                         " ^^ Better vim status bar.
-Plugin 'jebaum/vim-tmuxify'              " Control Tmux panes from Vim.
-Plugin 'jmcomets/vim-pony'               " Utilities for working with Django projects.
-Plugin 'michaeljsmith/vim-indent-object' " Add indent objects.
-Plugin 'rizzatti/dash.vim'               " Dash integration (OS X only).
-Plugin 'sjl/gundo.vim'                   " More powerful navigation of the undo tree.
-Plugin 'tpope/vim-commentary'            " Adds comments as text objects.
-Plugin 'tpope/vim-obsession'             " Save and restore vim sessions easily.
-Plugin 'tpope/vim-repeat'                " Repeat some more complex actions than basic vim.
-Plugin 'tpope/vim-surround'              " Manage surrounding quotes, parens, brackets, and braces.
-Plugin 'wlonk/argtextobj.vim'            " Adds function arguments as text objects. (Using my own fork.)
+                                        " ^^ Better vim status bar.
+Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
+Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
+Plugin 'michaeljsmith/vim-indent-object'
+                                        " ^^ Add indent objects.
+Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
+Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
+Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
+Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
+Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than basic vim.
+Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
+Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
 " Syntaxes
-Plugin 'digitaltoad/vim-pug'             " Syntax highlighting for the Pug templating language.
-Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja2 and Nunjucks syntax.
-Plugin 'godlygeek/tabular'               " Automatic formatting of Markdown tables.
-Plugin 'plasticboy/vim-markdown'         " Markdown syntax and tools. MUST come after tabular.
-Plugin 'groenewege/vim-less'             " Less-css syntax and tools.
-Plugin 'pangloss/vim-javascript'         " JavaScript syntax and tools.
-Plugin 'kchmck/vim-coffee-script'        " CoffeeScript syntax and tools.
-Plugin 'mxw/vim-jsx'                     " React and JSX.
-Plugin 'nono/vim-handlebars'             " Handlebars syntax and tools.
-Plugin 'racer-rust/vim-racer'            " Rust auto-completer. Requires command line tool racer.
-Plugin 'rust-lang/rust.vim'              " Rust syntax and tools.
-Plugin 'tomlion/vim-solidity'            " Ethereum Solidity syntax and tools.
+Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
+Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
+Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
+Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
+Plugin 'groenewege/vim-less'            " Less-css syntax and tools.
+Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
+Plugin 'kchmck/vim-coffee-script'       " CoffeeScript syntax and tools.
+Plugin 'mxw/vim-jsx'                    " React and JSX.
+Plugin 'mustache/vim-mustache-handlebars'
+                                        " ^^ Handlebars syntax and tools.
+Plugin 'racer-rust/vim-racer'           " Rust auto-completer. Requires command line tool racer.
+Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'tomlion/vim-solidity'           " Ethereum Solidity syntax and tools.
 " Utilities
-Plugin 'alfredodeza/pytest.vim'          " Integration with py.test
-Plugin 'mileszs/ack.vim'                 " Search all files in a codebase efficiently.
-Plugin 'tpope/vim-fugitive'              " Git integration tools.
+Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
+Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
+Plugin 'tpope/vim-fugitive'             " Git integration tools.
 call vundle#end()
 
 " Turn filetype back on now that Vundle is done
