@@ -43,15 +43,11 @@ Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templa
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
-Plugin 'groenewege/vim-less'            " Less-css syntax and tools.
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
-Plugin 'kchmck/vim-coffee-script'       " CoffeeScript syntax and tools.
 Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'mustache/vim-mustache-handlebars'
                                         " ^^ Handlebars syntax and tools.
-Plugin 'racer-rust/vim-racer'           " Rust auto-completer. Requires command line tool racer.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
-Plugin 'tomlion/vim-solidity'           " Ethereum Solidity syntax and tools.
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
 Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
