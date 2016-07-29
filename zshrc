@@ -121,6 +121,7 @@ alias ll="ls -lFha"
 alias ffs='sudo !!'
 alias gir="yes doom"
 alias p="ipython || python"
+alias tp="tmux-phi"
 alias j="jobs"
 # `cat` with beautiful colors. requires Pygments installed.
 # pip install Pygments
