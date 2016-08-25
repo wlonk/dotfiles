@@ -207,7 +207,7 @@ autocmd FileType python setlocal completeopt-=preview
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|tox)|tmp|node_modules|bower_components|dist|\_site|*.egg-info|htmlcov)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|tox)|tmp|node_modules|bower_components|dist|\_site|*.egg-info|htmlcov|jscov)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|pyc|swp)$',
 \}
 
