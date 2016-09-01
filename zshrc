@@ -103,6 +103,19 @@ if (( $+commands[pyenv] )); then
     eval "$(pyenv init -)"
 fi
 
+# Tmux-phi autocomplete
+_tmux_phi() {
+    local -a commands
+    commands=("${(@f)$(lsvirtualenv -b)}")
+
+    if (( CURRENT == 2 )); then
+        _describe -t commands 'commands' commands
+    fi
+
+    return 0
+}
+compdef _tmux_phi tmux-phi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
