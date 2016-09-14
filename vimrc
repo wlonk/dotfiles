@@ -48,6 +48,7 @@ Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'mustache/vim-mustache-handlebars'
                                         " ^^ Handlebars syntax and tools.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
 Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
