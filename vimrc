@@ -48,6 +48,7 @@ Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'mustache/vim-mustache-handlebars'
                                         " ^^ Handlebars syntax and tools.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'racer-rust/vim-racer'           " Auto completion for Rust.
 Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
@@ -230,6 +231,11 @@ let g:buffergator_suppress_keymaps = 1
 "let g:dash_map = {
 "    \ 'rust' : 'rust'
 "\ }
+
+""""
+" Rust settings
+let g:racer_cmd = $HOME . "/.cargo/bin/racer"
+let $RUST_SRC_PATH=$HOME . "/code/rust"
 
 """" Mappings
 
