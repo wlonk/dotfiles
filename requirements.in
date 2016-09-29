@@ -4,6 +4,7 @@ Pygments
 Sphinx
 autopep8
 awscli
+beeprint
 cookiecutter
 dotfiles
 ipython
