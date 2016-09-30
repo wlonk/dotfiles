@@ -89,7 +89,6 @@ export PROJECT_HOME=$HOME/code
 export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 export DISABLE_AUTO_TITLE=true
-export EVENT_NOKQUEUE=1  # Disable broken tmux kqueue
 export RUST_SRC_PATH=$HOME/code/rust/src
 # For docker on OS X only:
 if (( $+commands[docker-machine] )); then
