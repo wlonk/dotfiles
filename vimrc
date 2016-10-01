@@ -287,13 +287,10 @@ nmap <silent><leader>bl :BuffergatorOpen<cr>
 
 " New tab, close tab kind of behavior.
 nmap <silent><leader>T :enew<cr>
-nmap <silent><leader>bq :bp <BAR> bd #<cr>
+nmap <silent><leader>bq :bp <bar> bd #<cr>
 
 " Quick switch last two buffers
 nmap <silent><leader><leader> <C-^>
-
-" Quick open todo
-nmap <silent><leader>tt :sp note:todo<cr>
 
 " Run tests
 " (May want to generalize or improve this eventually?)
@@ -301,6 +298,9 @@ nmap <silent><leader>t <Esc>:Pytest file<cr>
 
 " Set filetype
 nmap <leader>ft <Esc>:set ft=
+
+" Open sibling file
+nmap <leader>os <Esc>:e %:h/
 
 " Custom vim-tmuxify actions for particular filetypes:
 if !exists('g:tmuxify_run')
