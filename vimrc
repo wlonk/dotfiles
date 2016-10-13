@@ -107,6 +107,17 @@ set ttyfast                             " Convince vim it has a fast connection 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
 
+"""
+augroup vimrcEx
+  " Clear all autocmds in the group
+  autocmd!
+  " Jump to last cursor position unless it's invalid or in an event handler
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+augroup END
+
 """"
 " Python configuration
 augroup vimrc_autocmds
@@ -249,7 +260,7 @@ let mapleader=","
 nnoremap ; :
 vnoremap ; :
 
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
+cnoremap <expr> %% expand('%:h').'/'
 
 " Convert to snake_case:
 nmap <silent><leader>sc :s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<cr>
@@ -311,6 +322,20 @@ let g:tmuxify_run['rust'] = "cargo test"
 
 """"
 " Custom functions
+
+" Don't get me wrong, I love smart quotes, but not in source.
+function! RemoveFancyCharacters()
+    let typo = {}
+    let typo["“"] = '"'
+    let typo["”"] = '"'
+    let typo["‘"] = "'"
+    let typo["’"] = "'"
+    let typo["–"] = '--'
+    let typo["—"] = '---'
+    let typo["…"] = '...'
+    :exe ":%s/".join(keys(typo), '\|').'/\=typo[submatch(0)]/ge'
+endfunction
+command! RemoveFancyCharacters :call RemoveFancyCharacters()
 
 " Create missing directories on write. Really shines in combo with the
 " auto-test-files function below.
