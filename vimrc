@@ -116,6 +116,8 @@ augroup vimrcEx
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
+  autocmd BufReadPost COMMIT_EDITMSG
+    \ exe "normal! gg"
 augroup END
 
 """"
