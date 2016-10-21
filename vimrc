@@ -248,7 +248,11 @@ let g:buffergator_suppress_keymaps = 1
 """"
 " Rust settings
 let g:racer_cmd = $HOME . "/.cargo/bin/racer"
-let $RUST_SRC_PATH=$HOME . "/code/rust"
+let $RUST_SRC_PATH = $HOME . "/code/rust"
+augroup rust_commands
+    autocmd FileType rust :compiler cargo
+    autocmd FileType rust nnoremap <cr> :Make test<cr>
+augroup END
 
 """" Mappings
 
