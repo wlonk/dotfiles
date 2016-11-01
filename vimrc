@@ -45,6 +45,7 @@ Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
+Plugin 'mattn/emmet-vim'                " More better HTML writing
 Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'mustache/vim-mustache-handlebars'
                                         " ^^ Handlebars syntax and tools.
