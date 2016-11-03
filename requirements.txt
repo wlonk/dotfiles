@@ -9,12 +9,12 @@ appnope==0.1.0            # via ipython
 argparse==1.4.0           # via markdoc
 arrow==0.8.0              # via jinja2-time
 autopep8==1.2.4
-awscli==1.11.8
+awscli==1.11.12
 babel==2.3.4              # via sphinx
 backports.shutil-get-terminal-size==1.0.0  # via ipython
 beeprint==2.4.5
 binaryornot==0.4.0        # via cookiecutter
-botocore==1.4.65          # via awscli, s3transfer
+botocore==1.4.69          # via awscli, s3transfer
 chardet==2.3.0            # via binaryornot
 CherryPy==8.1.2           # via markdoc
 click==6.6                # via cookiecutter, pip-tools, tmuxp
@@ -28,7 +28,7 @@ enum34==1.1.6             # via traitlets
 Fabric==1.12.0
 fancycompleter==0.5       # via pdbpp
 first==2.0.1              # via pip-tools
-future==0.15.2            # via cookiecutter
+future==0.16.0            # via cookiecutter
 futures==3.0.5            # via s3transfer
 imagesize==0.7.1          # via sphinx
 ipython-genutils==0.1.0   # via traitlets
