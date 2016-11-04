@@ -157,6 +157,7 @@ augroup END
 let g:vim_markdown_folding_style_pythonic = 1
 " Spell check markdown files.
 autocmd FileType markdown setlocal spell
+autocmd FileType rst setlocal spell
 
 """"
 " Handlebars abbreviations
