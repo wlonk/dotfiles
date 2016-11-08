@@ -124,11 +124,19 @@ augroup END
 
 """"
 " Python configuration
-augroup vimrc_autocmds
+augroup vimrcPython
     autocmd!
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python match Excess /\%80v.*/
     autocmd FileType python set nowrap
+augroup END
+
+""""
+" Sphinx & reStructuredText configuration
+augroup vimrcSphinx
+    autocmd!
+    autocmd BufEnter *.rst silent! lcd %:p:h
+    autocmd FileType rst nnoremap <cr> :Dispatch make html<cr>
 augroup END
 
 """"
@@ -140,7 +148,7 @@ autocmd BufNewFile,BufRead *.njk set filetype=jinja
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 autocmd FileType htmldjango inoremap {% {% %}<left><left><left>
 autocmd FileType htmldjango inoremap {{ {{ }}<left><left><left>
-augroup django_autocmds
+augroup vimrcDjango
     autocmd!
     autocmd FileType htmldjango let b:surround_{char2nr("v")} = "{{ \r }}"
     autocmd FileType htmldjango let b:surround_{char2nr("{")} = "{{ \r }}"
@@ -251,7 +259,7 @@ let g:buffergator_suppress_keymaps = 1
 " Rust settings
 let g:racer_cmd = $HOME . "/.cargo/bin/racer"
 let $RUST_SRC_PATH = $HOME . "/code/rust"
-augroup rust_commands
+augroup vimrcRust
     autocmd FileType rust :compiler cargo
     autocmd FileType rust nnoremap <cr> :Make test<cr>
 augroup END
@@ -356,7 +364,7 @@ function s:MkNonExDir(file, buf)
         endif
     endif
 endfunction
-augroup BWCCreateDir
+augroup vimrcCreateDir
     autocmd!
     autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
