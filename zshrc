@@ -88,7 +88,7 @@ export PROJECT_HOME=$HOME/code
 export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 export DISABLE_AUTO_TITLE=true
-export RUST_SRC_PATH=$HOME/code/rust/src
+export RUST_SRC_PATH=$HOME/code/libs/rust/src
 # For docker on OS X only:
 if (( $+commands[docker-machine] )); then
     eval $(docker-machine env default 2> /dev/null)
