@@ -96,3 +96,6 @@
 
 [ghi]
     token = !security find-internet-password -a wlonk -s github.com -l 'ghi token' -w
+
+[gpg]
+    program = /usr/local/MacGPG2/bin/gpg2
