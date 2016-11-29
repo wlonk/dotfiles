@@ -123,6 +123,12 @@ augroup vimrcEx
 augroup END
 
 """"
+" Quickfix controls
+augroup vimrcQuickfix
+    autocmd BufReadPost quickfix nnoremap <buffer> <cr> <cr>
+augroup END
+
+""""
 " Python configuration
 augroup vimrcPython
     autocmd!
