@@ -1,2 +1,7 @@
 jekyll
 pygments.rb
+bundler
+foreman
+pg
+rails
+thin
