@@ -157,6 +157,9 @@ case $HOST in
         ;;
 esac
 
+# rbenv setup:
+eval "$(rbenv init -)"
+
 if [[ -f .dev-env ]]; then
     source .dev-env
 fi

@@ -46,6 +46,7 @@ pypy
 python
 python3
 rabbitmq
+rbenv
 readline
 reattach-to-user-namespace
 redis
