@@ -1,7 +1,9 @@
-jekyll
-pygments.rb
-bundler
-foreman
-pg
-rails
-thin
+source 'https://rubygems.org'
+
+gem 'jekyll'
+gem 'pygments.rb'
+gem 'bundler'
+gem 'foreman'
+gem 'pg'
+gem 'rails'
+gem 'thin'

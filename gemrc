@@ -1,3 +1,4 @@
 # http://guides.rubygems.org/command-reference/#gem-environment
 --- 
-gem: --no-ri --no-rdoc --user-install
+install: --no-ri --no-rdoc
+update: --no-ri --no-rdoc
