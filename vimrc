@@ -182,14 +182,16 @@ let g:mustache_abbreviations = 1
 " Narrower indents
 " (These don't have to be in an augroup, as repeating them has no effect.)
 autocmd FileType css             setlocal shiftwidth=2 tabstop=2
-autocmd FileType html            setlocal shiftwidth=2 tabstop=2
-autocmd FileType htmldjango      setlocal shiftwidth=2 tabstop=2
+autocmd FileType eruby           setlocal shiftwidth=2 tabstop=2
 autocmd FileType handlebars.html setlocal shiftwidth=2 tabstop=2
+autocmd FileType html            setlocal shiftwidth=2 tabstop=2
 autocmd FileType html.handlebars setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango      setlocal shiftwidth=2 tabstop=2
 autocmd FileType jade            setlocal shiftwidth=2 tabstop=2
-autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript      setlocal shiftwidth=2 tabstop=2
 autocmd FileType less            setlocal shiftwidth=2 tabstop=2
+autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
