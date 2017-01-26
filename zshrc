@@ -63,6 +63,7 @@ plugins=(
     fabric
     git
     github
+    mercurial
     osx
     pip
     python
@@ -72,8 +73,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 # Show background processes in prompt:
 export PROMPT="%(1j.%{$fg[yellow]%}<%j>%{$reset_color%} .)$PROMPT"
+
+ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
 setopt autopushd
 
