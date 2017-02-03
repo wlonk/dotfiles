@@ -8,6 +8,7 @@ beeprint
 cookiecutter
 dotfiles
 ipython
+isort
 pdbpp
 pip-tools
 powerline-status
@@ -17,3 +18,4 @@ tmuxp
 tox
 virtualenvwrapper
 wheel
+yapf

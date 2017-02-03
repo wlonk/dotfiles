@@ -20,7 +20,7 @@ Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in
 Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
 Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
 Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
-Plugin 'ervandew/supertab'              " Generic tab completion.
+" Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
 Plugin 'klen/python-mode'               " Excellent Python language support.
@@ -111,15 +111,15 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 
 """
 augroup vimrcEx
-  " Clear all autocmds in the group
-  autocmd!
-  " Jump to last cursor position unless it's invalid or in an event handler
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-  autocmd BufReadPost COMMIT_EDITMSG
-    \ exe "normal! gg"
+    " Clear all autocmds in the group
+    autocmd!
+    " Jump to last cursor position unless it's invalid or in an event handler
+    autocmd BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \   exe "normal g`\"" |
+                \ endif
+    autocmd BufReadPost COMMIT_EDITMSG
+                \ exe "normal! gg"
 augroup END
 
 """"
@@ -135,6 +135,8 @@ augroup vimrcPython
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
     autocmd FileType python match Excess /\%80v.*/
     autocmd FileType python set nowrap
+    autocmd FileType python nnoremap <leader>= :0,$!yapf<cr>
+    autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
 augroup END
 
 """"
