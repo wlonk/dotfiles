@@ -20,7 +20,7 @@ Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in
 Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
 Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
 Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
-" Plugin 'ervandew/supertab'              " Generic tab completion.
+Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
 Plugin 'klen/python-mode'               " Excellent Python language support.
