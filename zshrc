@@ -73,7 +73,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 # Show background processes in prompt:
 export PROMPT="%(1j.%{$fg[yellow]%}<%j>%{$reset_color%} .)$PROMPT"
 
