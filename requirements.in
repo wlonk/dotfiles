@@ -16,6 +16,7 @@ requests
 tldr
 tmuxp
 tox
+twine
 virtualenvwrapper
 wheel
 yapf
