@@ -39,6 +39,8 @@ Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
 Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than basic vim.
 Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
+Plugin 'file:///Users/kit/code/vim-orthodontics'
+                                        " ^ Reshape inside braces
 " Syntaxes
 Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
@@ -258,12 +260,6 @@ let g:buffergator_viewport_split_policy = 'R'
 
 " I want my own keymappings...
 let g:buffergator_suppress_keymaps = 1
-
-""""
-" Dash docset mappings:
-"let g:dash_map = {
-"    \ 'rust' : 'rust'
-"\ }
 
 """"
 " Rust settings
