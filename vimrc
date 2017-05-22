@@ -39,8 +39,7 @@ Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
 Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than basic vim.
 Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
-Plugin 'file:///Users/kit/code/vim-orthodontics'
-                                        " ^ Reshape inside braces
+Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 " Syntaxes
 Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
@@ -121,7 +120,7 @@ augroup vimrcEx
                 \   exe "normal g`\"" |
                 \ endif
     autocmd BufReadPost COMMIT_EDITMSG
-                \ exe "normal! gg"
+                \ exe "normal! gg0"
 augroup END
 
 """"
@@ -146,7 +145,8 @@ augroup END
 augroup vimrcSphinx
     autocmd!
     autocmd BufEnter *.rst silent! lcd %:p:h
-    autocmd FileType rst nnoremap <cr> :Dispatch make html<cr>
+    autocmd FileType rst nnoremap <cr> :Dispatch make dirhtml<cr>
+    autocmd FileType rst setlocal textwidth=72
 augroup END
 
 """"
@@ -199,6 +199,8 @@ autocmd FileType ruby            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
+
+autocmd FileType rst             setlocal shiftwidth=3 tabstop=3
 
 """"
 " ack.vim searching
