@@ -121,6 +121,10 @@ augroup vimrcEx
                 \ endif
     autocmd BufReadPost COMMIT_EDITMSG
                 \ exe "normal! gg0"
+    autocmd BufReadPost PULLREQ_EDITMSG
+                \ exe "normal! gg0"
+    autocmd BufReadPost GHI_ISSUE
+                \ exe "normal! gg0"
 augroup END
 
 """"
