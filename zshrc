@@ -143,6 +143,8 @@ alias p="ipython || python"
 alias tp="tmux-phi"
 alias j="jobs"
 alias bx="bundle exec"
+alias now='date "+%Y-%m-%d::%H:%M"'
+alias today='date "+%Y-%m-%d"'
 # `cat` with beautiful colors. requires Pygments installed.
 # pip install Pygments
 alias c='pygmentize -O style=monokai -f console256 -g'  
