@@ -38,6 +38,7 @@ Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
 Plugin 'tpope/vim-obsession'            " Save and restore vim sessions easily.
 Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than basic vim.
 Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
+Plugin 'tpope/tpope-vim-abolish'        " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
 Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 " Syntaxes
