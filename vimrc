@@ -17,21 +17,17 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Functionality
 Plugin 'airblade/vim-gitgutter'         " Show git add/delete/change per line in gutter.
-Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
-Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
 Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
 Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
 Plugin 'klen/python-mode'               " Excellent Python language support.
-Plugin 'davidhalter/jedi-vim'           " Python autocomplete and linters. MUST come after python-mode.
+Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
-Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
 Plugin 'michaeljsmith/vim-indent-object'
                                         " ^^ Add indent objects.
-Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-dispatch'             " Better :make commands
 Plugin 'tpope/vim-commentary'           " Adds comments as text objects.
@@ -47,17 +43,22 @@ Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
-Plugin 'mattn/emmet-vim'                " More better HTML writing
 Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'mustache/vim-mustache-handlebars'
                                         " ^^ Handlebars syntax and tools.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
-Plugin 'racer-rust/vim-racer'           " Auto completion for Rust.
 Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
 Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
 Plugin 'tpope/vim-fugitive'             " Git integration tools.
+" Plugins I never folded into my workflow:
+" Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
+" Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
+" Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
+" Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
+" Plugin 'mattn/emmet-vim'                " More better HTML writing
+" Plugin 'racer-rust/vim-racer'           " Auto completion for Rust.
 call vundle#end()
 
 " Turn filetype back on now that Vundle is done
@@ -244,6 +245,7 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 " Let's use Jedi instead of Rope, but turn off the documentation window.
 let g:pymode_rope = 0
 autocmd FileType python setlocal completeopt-=preview
+let g:ycm_python_binary_path = 'python'
 
 """"
 " Ctrl-P (Better file opening)
