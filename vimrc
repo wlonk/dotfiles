@@ -247,6 +247,13 @@ let g:pymode_rope = 0
 autocmd FileType python setlocal completeopt-=preview
 let g:ycm_python_binary_path = 'python'
 
+" Go to definition or declaration:
+nnoremap <leader>d :YcmCompleter GoTo<cr>
+
+" Custom Python helpers:
+" Insert argskwargs with <c-l>
+imap <c-l> *args,<space>**kwargs
+
 """"
 " Ctrl-P (Better file opening)
 " With Buffergator, to better handle buffer-switching
