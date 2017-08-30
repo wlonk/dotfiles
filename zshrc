@@ -52,7 +52,9 @@ DISABLE_AUTO_TITLE="true"
 export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/code/android-sdk-macosx/tools:$PATH
 # Define this before we load the virtualenvwrapper plugin, so that it will use
 # the right Python.
-export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3
+if (( $+commands[pyenv] )); then
+    export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
