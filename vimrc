@@ -261,7 +261,7 @@ imap <c-l> *args,<space>**kwargs
 
 " Setup some default ignores
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|tox)|tmp|node_modules|bower_components|dist|\_site|*.egg-info|htmlcov|jscov)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn|tox)|tmp|node_modules|bower_components|dist|\_site|*.egg-info|htmlcov|jscov|_?build)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg|pyc|swp)$',
 \}
 
