@@ -48,6 +48,9 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# If I mean to cd, I'll cd.
+DISABLE_VENV_CD=1
+
 # Put this before the plugins, so they use the correct PATH.
 export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/code/android-sdk-macosx/tools:$PATH
 # Define this before we load the virtualenvwrapper plugin, so that it will use
