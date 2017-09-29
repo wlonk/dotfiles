@@ -360,6 +360,12 @@ if !exists('g:tmuxify_run')
 endif
 let g:tmuxify_run['rust'] = "cargo test"
 
+" :TxSetPane <session>:<window>.<pane>
+" Commonly:
+" :TxSetPane 0:<window>.2
+" nmap <leader><cr> :TxSend 'apistar test'<cr>
+" ... or whatever
+
 """"
 " Custom functions
 
