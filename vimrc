@@ -145,6 +145,8 @@ augroup vimrcPython
     autocmd FileType python set nowrap
     autocmd FileType python nnoremap <leader>= :0,$!yapf<cr>
     autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
+    " .pyi is a Python interface file.
+    autocmd BufNewFile,BufRead *.pyi set filetype=python
 augroup END
 
 """"
