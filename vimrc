@@ -250,12 +250,14 @@ let g:pymode_rope = 0
 autocmd FileType python setlocal completeopt-=preview
 let g:ycm_python_binary_path = 'python'
 
-" Go to definition or declaration:
+" Turn off ycm diagnostics, so we can use leader-d for 'definition':
+let g:ycm_key_detailed_diagnostics = ''
 nmap <leader>d :YcmCompleter GoTo<cr>
 
 " Custom Python helpers:
 " Insert argskwargs with <c-l>
 imap <c-l> *args,<space>**kwargs
+imap <c-l><c-t> *args:<space>VarArg,<space>**kwargs:<space>KwArg
 
 """"
 " Ctrl-P (Better file opening)
@@ -365,7 +367,7 @@ let g:tmuxify_run['rust'] = "cargo test"
 " :TxSetPane <session>:<window>.<pane>
 " Commonly:
 " :TxSetPane 0:<window>.2
-" nmap <leader><cr> :TxSend 'apistar test'<cr>
+" nmap <leader><cr> :TxSend 'gulp test'<cr>
 " ... or whatever
 
 """"
