@@ -176,3 +176,7 @@ eval "$(rbenv init -)"
 if [[ -f .dev-env ]]; then
     source .dev-env
 fi
+
+if [[ -f .secrets ]]; then
+    source .secrets
+fi

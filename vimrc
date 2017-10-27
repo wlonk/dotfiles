@@ -85,6 +85,7 @@ set clipboard=unnamed                   " Default to system clipboard.
 set encoding=utf-8                      " A more elegant encoding for a more civilized age.
 set expandtab                           " Turn tabs into spaces.
 set fileencoding=utf-8                  " A more elegant encoding for a more civilized age.
+set foldlevelstart=20                   " Start with things unfolded by default.
 set hidden                              " Allow hiding buffers without saving all changes.
 set hlsearch                            " Highlight search matches.
 set laststatus=2                        " Make the status bar show a bit less.
@@ -211,6 +212,21 @@ autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
 
 autocmd FileType rst             setlocal shiftwidth=3 tabstop=3
 
+""" Basics:
+
+" No arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Let's get fancy. Change two fundamental mappings
+let mapleader=","
+nnoremap ; :
+vnoremap ; :
+
+cnoremap <expr> %% expand('%:h').'/'
+
 """"
 " ack.vim searching
 " If we have ag (the Silver Searcher), let's use it.
@@ -292,20 +308,6 @@ augroup vimrcRust
 augroup END
 
 """" Mappings
-
-" No arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" Let's get fancy. Change two fundamental mappings
-let mapleader=","
-nnoremap ; :
-vnoremap ; :
-
-cnoremap <expr> %% expand('%:h').'/'
-
 " Convert to snake_case:
 nmap <silent><leader>sc :s#\C\(\<\u[a-z0-9]\+\|[a-z0-9]\+\)\(\u\)#\l\1_\l\2#g<cr>
 
@@ -369,6 +371,15 @@ let g:tmuxify_run['rust'] = "cargo test"
 " :TxSetPane 0:<window>.2
 " nmap <leader><cr> :TxSend 'gulp test'<cr>
 " ... or whatever
+
+function! GetTxWindow()
+    return system('tmux display-message -p ' . shellescape("'#I'"))
+endfunction
+
+function SetGlobalTxPane()
+    let pane = "0:" . GetTxWindow() . ".2"
+    :TxSetPane! pane
+endfunction
 
 """"
 " Custom functions
