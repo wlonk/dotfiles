@@ -68,6 +68,7 @@ plugins=(
     fabric
     git
     github
+    heroku
     osx
     pip
     python
@@ -146,6 +147,7 @@ alias gir="yes doom"
 alias p="ipython || python"
 alias tp="tmux-phi"
 alias j="jobs"
+alias h="heroku"
 alias bx="bundle exec"
 alias now='date "+%Y-%m-%d::%H:%M"'
 alias today='date "+%Y-%m-%d"'
