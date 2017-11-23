@@ -26,6 +26,7 @@ Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
+Plugin 'majutsushi/tagbar'              " Show file logical structure.
 Plugin 'michaeljsmith/vim-indent-object'
                                         " ^^ Add indent objects.
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
@@ -130,6 +131,29 @@ augroup vimrcEx
     autocmd BufReadPost GHI_ISSUE
                 \ exe "normal! gg0"
 augroup END
+
+
+"""
+" Tagbar configuration
+
+nmap <F8> :TagbarToggle<CR>
+let g:tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsargs' : '-f - --sort=no',
+    \ 'kinds' : [
+        \ 'c:chapter',
+        \ 's:sections',
+        \ 'S:subsections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 'c' : 'chapter',
+        \ 's' : 'section',
+        \ 'S' : 'subsection',
+    \ },
+    \ 'sort': 0,
+\ }
 
 """"
 " Quickfix controls
