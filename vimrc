@@ -27,6 +27,7 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
 Plugin 'majutsushi/tagbar'              " Show file logical structure.
+Plugin 'MattesGroeger/vim-bookmarks'    " Improve line marks.
 Plugin 'michaeljsmith/vim-indent-object'
                                         " ^^ Add indent objects.
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
