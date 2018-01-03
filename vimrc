@@ -40,6 +40,7 @@ Plugin 'tpope/tpope-vim-abolish'        " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
 Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 " Syntaxes
+Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
 Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
@@ -154,6 +155,20 @@ let g:tagbar_type_rst = {
         \ 'S' : 'subsection',
     \ },
     \ 'sort': 0,
+\ }
+
+let g:tagbar_type_rust = {
+    \ 'ctagstype' : 'rust',
+    \ 'kinds' : [
+        \ 'T:types,type definitions',
+        \ 'f:functions,function definitions',
+        \ 'g:enum,enumeration names',
+        \ 's:structure names',
+        \ 'm:modules,module names',
+        \ 'c:consts,static constants',
+        \ 't:traits',
+        \ 'i:impls,trait implementations',
+    \ ]
 \ }
 
 """"
@@ -391,20 +406,25 @@ if !exists('g:tmuxify_run')
 endif
 let g:tmuxify_run['rust'] = "cargo test"
 
-" :TxSetPane <session>:<window>.<pane>
-" Commonly:
-" :TxSetPane 0:<window>.2
-" nmap <leader><cr> :TxSend 'gulp test'<cr>
-" ... or whatever
-
 function! GetTxWindow()
-    return system('tmux display-message -p ' . shellescape("'#I'"))
+    let win = system('tmux display-message -p ' . shellescape("'#I'")) 
+    let win = substitute(win, '\n$', '', '')
+    let win = substitute(win, "'", '', 'g')
+    return win
 endfunction
 
-function SetGlobalTxPane()
+function! SetGlobalTxPane()
     let pane = "0:" . GetTxWindow() . ".2"
-    :TxSetPane! pane
+    execute ':TxSetPane! ' . pane
 endfunction
+
+function! SetTestCmd(cmd)
+    call SetGlobalTxPane()
+    echo a:cmd
+    execute ":nmap <leader><cr> :TxSend! " . a:cmd . "<cr>"
+endfunction
+command! -nargs=1 SetTestCmd call SetTestCmd(<f-args>)
+
 
 """"
 " Custom functions
