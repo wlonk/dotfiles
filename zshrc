@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 DISABLE_VENV_CD=1
 
 # Put this before the plugins, so they use the correct PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$HOME/code/android-sdk-macosx/tools:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 # Define this before we load the virtualenvwrapper plugin, so that it will use
 # the right Python.
 if (( $+commands[pyenv] )); then
@@ -72,6 +72,7 @@ plugins=(
     osx
     pip
     python
+    pyenv
     tmux
     virtualenvwrapper
 )
