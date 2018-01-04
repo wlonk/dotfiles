@@ -39,23 +39,28 @@ Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, bra
 Plugin 'tpope/tpope-vim-abolish'        " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
 Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
+
 " Syntaxes
-Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
-Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
+Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
+Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
 Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
-Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
 Plugin 'mxw/vim-jsx'                    " React and JSX.
-Plugin 'mustache/vim-mustache-handlebars'
-                                        " ^^ Handlebars syntax and tools.
+Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
-Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
-Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
+
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
 Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
 Plugin 'tpope/vim-fugitive'             " Git integration tools.
+
+" Plugins for syntaxes I don't currently work with:
+" Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
+" Plugin 'mustache/vim-mustache-handlebars'
+"                                         " ^^ Handlebars syntax and tools.
+" Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
+
 " Plugins I never folded into my workflow:
 " Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
 " Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
