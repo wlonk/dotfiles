@@ -91,6 +91,9 @@
 [rerere]
     enabled = true
 
+[pager]
+    branch = false
+
 [github]
     user = wlonk
 
@@ -99,10 +102,6 @@
 
 [gpg]
     program = /usr/local/MacGPG2/bin/gpg2
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+
 [diff-so-fancy]
 	first-run = false
