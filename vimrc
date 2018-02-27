@@ -288,7 +288,8 @@ let g:pymode_doc_key = 'K'
 
 " Linting
 let g:pymode_lint = 1
-let g:pymode_lint_ignore = "W503"
+let g:pymode_lint_checkers = ['pycodestyle']
+let g:pymode_lint_ignore = ["W503"]
 
 " Auto check on save
 let g:pymode_lint_write = 1
@@ -301,6 +302,7 @@ let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = '<leader>b'
 
 " syntax highlighting
+let g:pymode_python = 'python3'
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
