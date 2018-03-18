@@ -21,7 +21,7 @@ Plugin 'ctrlpvim/ctrlp.vim'             " Best way to open files.
 Plugin 'ervandew/supertab'              " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
-Plugin 'klen/python-mode'               " Excellent Python language support.
+Plugin 'python-mode/python-mode'        " Excellent Python language support.
 Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
