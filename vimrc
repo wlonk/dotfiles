@@ -193,6 +193,8 @@ augroup vimrcPython
     autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
     " .pyi is a Python interface file.
     autocmd BufNewFile,BufRead *.pyi set filetype=python
+    autocmd InsertEnter *.py setlocal foldmethod=marker
+    autocmd InsertLeave *.py setlocal foldmethod=expr
 augroup END
 
 """"
