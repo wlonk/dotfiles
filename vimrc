@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2016-04-01
+" Date:    2018-04-07
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -26,9 +26,9 @@ Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
-Plugin 'majutsushi/tagbar'              " Show file logical structure.
+" Plugin 'majutsushi/tagbar'              " Show file logical structure.
 Plugin 'MattesGroeger/vim-bookmarks'    " Improve line marks.
-Plugin 'michaeljsmith/vim-indent-object'
+" Plugin 'michaeljsmith/vim-indent-object'
                                         " ^^ Add indent objects.
 Plugin 'sjl/gundo.vim'                  " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-dispatch'             " Better :make commands
@@ -38,22 +38,21 @@ Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than 
 Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'tpope/tpope-vim-abolish'        " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
-Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
+" Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 
 " Syntaxes
-Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
+" Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
-Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
-Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
-Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
-Plugin 'mxw/vim-jsx'                    " React and JSX.
+" Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
+" Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
+" Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
+" Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
-Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+" Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
 
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
 Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficiently.
-Plugin 'tpope/vim-fugitive'             " Git integration tools.
 
 " Plugins for syntaxes I don't currently work with:
 " Plugin 'digitaltoad/vim-pug'            " Syntax highlighting for the Pug templating language.
@@ -62,6 +61,7 @@ Plugin 'tpope/vim-fugitive'             " Git integration tools.
 " Plugin 'wlonk/choicescript.vim'         " Choicescript syntax and tools.
 
 " Plugins I never folded into my workflow:
+" Plugin 'tpope/vim-fugitive'             " Git integration tools.
 " Plugin 'alvan/vim-closetag'             " If I open an HTML tag, I want to close it, alright?
 " Plugin 'christoomey/vim-sort-motion'    " Sort text objects.
 " Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
@@ -193,8 +193,6 @@ augroup vimrcPython
     autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
     " .pyi is a Python interface file.
     autocmd BufNewFile,BufRead *.pyi set filetype=python
-    autocmd InsertEnter *.py setlocal foldmethod=marker
-    autocmd InsertLeave *.py setlocal foldmethod=expr
 augroup END
 
 """"
@@ -230,6 +228,7 @@ augroup END
 """"
 " Markdown configuration
 let g:vim_markdown_folding_style_pythonic = 1
+
 " Spell check markdown files.
 autocmd FileType markdown setlocal spell
 autocmd FileType rst setlocal spell
@@ -309,6 +308,9 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
+
+" Don't use pymode's folding, it's slow af:
+let g:pymode_folding = 0
 
 " Let's use Jedi instead of Rope, but turn off the documentation window.
 let g:pymode_rope = 0
@@ -523,7 +525,7 @@ endfunction
 function OpenRelatedTests()
     let related_tests = RelatedTests()
     if related_tests != ''
-        exec ':vsp ' . related_tests
+        exec ':e ' . related_tests
     end
 endfunction
 nnoremap <leader>. :call OpenRelatedTests()<cr>

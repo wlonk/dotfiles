@@ -5,14 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-case $HOST in
-    drop.transneptune.net)
-        ZSH_THEME="cypher"
-        ;;
-    *)
-        ZSH_THEME="robbyrussell"
-        ;;
-esac
+ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -64,16 +57,11 @@ fi
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    django
-    fabric
     git
     github
     heroku
-    osx
     pip
-    python
     pyenv
-    tmux
     virtualenvwrapper
 )
 
@@ -102,9 +90,9 @@ export PYTHONDONTWRITEBYTECODE=1
 export DISABLE_AUTO_TITLE=true
 export RUST_SRC_PATH=$HOME/code/libs/rust/src
 # For docker on OS X only:
-if (( $+commands[docker-machine] )); then
-    eval $(docker-machine env default 2> /dev/null)
-fi
+# if (( $+commands[docker-machine] )); then
+#     eval $(docker-machine env default 2> /dev/null)
+# fi
 # Burn Java with Fire.
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 # Handle many parallel Python versions through PyEnv
