@@ -44,8 +44,6 @@ DISABLE_AUTO_TITLE="true"
 # If I mean to cd, I'll cd.
 DISABLE_VENV_CD=1
 
-# Put this before the plugins, so they use the correct PATH.
-export PATH=$HOME/bin:$HOME/.cargo/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 # Define this before we load the virtualenvwrapper plugin, so that it will use
 # the right Python.
 if (( $+commands[pyenv] )); then
@@ -62,6 +60,7 @@ plugins=(
     heroku
     pip
     pyenv
+    tmux
     virtualenvwrapper
 )
 
@@ -101,6 +100,9 @@ if (( $+commands[pyenv] )); then
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
+
+# Prepend my local bin dir:
+export PATH="$HOME/bin:$PATH"
 
 # Tmux-phi autocomplete
 _tmux_phi() {
@@ -163,6 +165,10 @@ esac
 
 # rbenv setup:
 eval "$(rbenv init -)"
+
+# nvm setup:
+# export NVM_DIR=$HOME/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 if [[ -f .dev-env ]]; then
     source .dev-env

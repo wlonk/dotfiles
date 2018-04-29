@@ -41,7 +41,7 @@ Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text object
 " Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 
 " Syntaxes
-" Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
+Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
 " Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
 " Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
