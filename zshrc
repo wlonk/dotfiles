@@ -44,6 +44,8 @@ fi
 # Set up virtualenvwrapper
 # source $HOME/.pyenv/shims/virtualenvwrapper.sh
 
+# Prepend rustup:
+export PATH="$HOME/.cargo/bin:$PATH"
 # Prepend my local bin dir:
 export PATH="$HOME/bin:$PATH"
 

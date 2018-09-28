@@ -46,7 +46,7 @@
     sv = semver-tags
 
     # for `hub`
-    pr = pull-request
+    prq = pull-request
 
     # Checkpoint: save current state with a UUID for a commit message. Commit
     # early, commit often, interactive rebase, push late.

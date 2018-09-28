@@ -23,7 +23,7 @@ Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I lik
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
 Plugin 'python-mode/python-mode'        " Excellent Python language support.
 Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
 " Plugin 'majutsushi/tagbar'              " Show file logical structure.
@@ -43,6 +43,7 @@ Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text object
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
+Plugin 'lervag/vimtex'                  " LaTeX
 " Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
 " Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 " Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
@@ -529,3 +530,8 @@ function OpenRelatedTests()
     end
 endfunction
 nnoremap <leader>. :call OpenRelatedTests()<cr>
+
+function Blacken()
+    exec '%! black -q -'
+endfunction
+command! Blacken call Blacken()
