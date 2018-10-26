@@ -433,7 +433,11 @@ endfunction
 function! SetTestCmd(cmd)
     call SetGlobalTxPane()
     echo a:cmd
-    execute ":nmap <leader><cr> :TxSend! " . a:cmd . "<cr>"
+    " By sending SIGINT first, we bump the pane down to the latest prompt.
+    " This avoids vim-tmuxify asking us if we really wanna scroll down. As we
+    " frequently have to scroll up to see the stacktrace of a failing test,
+    " this saves us a lot of grief.
+    execute ":nmap <leader><cr> :TxSigInt! \\| TxSend! " . a:cmd . "<cr>"
 endfunction
 command! -nargs=1 SetTestCmd call SetTestCmd(<f-args>)
 
