@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2018-04-07
+" Date:    2019-01-08
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -26,7 +26,7 @@ Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
 " Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
-" Plugin 'majutsushi/tagbar'              " Show file logical structure.
+Plugin 'majutsushi/tagbar'              " Show file logical structure.
 Plugin 'MattesGroeger/vim-bookmarks'    " Improve line marks.
 " Plugin 'michaeljsmith/vim-indent-object'
                                         " ^^ Add indent objects.
@@ -44,12 +44,12 @@ Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text object
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
 Plugin 'Rykka/riv.vim'                  " reStructuredText tools.
 Plugin 'lervag/vimtex'                  " LaTeX
-" Plugin 'cespare/vim-toml'               " Syntax for TOML, to facilitate Rust packaging.
+Plugin 'cespare/vim-toml'               " Syntax for TOML, for Rust and Python packaging.
 " Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 " Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
-" Plugin 'mxw/vim-jsx'                    " React and JSX.
+Plugin 'mxw/vim-jsx'                    " React and JSX.
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
-" Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
 
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
@@ -68,7 +68,7 @@ Plugin 'mileszs/ack.vim'                " Search all files in a codebase efficie
 " Plugin 'jmcomets/vim-pony'              " Utilities for working with Django projects.
 " Plugin 'rizzatti/dash.vim'              " Dash integration (OS X only).
 " Plugin 'mattn/emmet-vim'                " More better HTML writing
-" Plugin 'racer-rust/vim-racer'           " Auto completion for Rust.
+Plugin 'racer-rust/vim-racer'           " Auto completion for Rust.
 call vundle#end()
 
 " Turn filetype back on now that Vundle is done
@@ -188,7 +188,10 @@ augroup END
 augroup vimrcPython
     autocmd!
     autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
-    autocmd FileType python match Excess /\%80v.*/
+    " Use a width of 88. This isn't in line with PEP8, but it's in line with
+    " Black, and I somewhat prefer it:
+    autocmd FileType python match Excess /\%88v.*/
+    autocmd FileType python setlocal textwidth=88
     autocmd FileType python set nowrap
     autocmd FileType python nnoremap <leader>= :0,$!yapf<cr>
     autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
@@ -289,8 +292,8 @@ let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 
 " Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checkers = ['pycodestyle']
+let g:pymode_lint = 0
+let g:pymode_lint_checkers = ['flake8']
 let g:pymode_lint_ignore = ["W503"]
 
 " Auto check on save
