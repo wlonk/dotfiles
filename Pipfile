@@ -4,7 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+Sphinx = "*"
 beeprint = "*"
+black = "*"
 bumpversion = "*"
 colorama = "*"
 cookiecutter = "*"
@@ -12,15 +14,17 @@ dotfiles = "*"
 ipython = "*"
 libtmux = "*"
 pdbpp = "*"
+pipdeptree = "*"
+pipenv = "*"
+poetry = "*"
 powerline-status = "*"
 pycodestyle = "*"
 tmuxp = "*"
 twine = "*"
 virtualenvwrapper = "*"
 watchdog = "*"
-Sphinx = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
