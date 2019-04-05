@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2019-01-08
+" Date:    2019-04-01
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -23,7 +23,7 @@ Plugin 'flazz/vim-colorschemes'         " Provides the hybrid color scheme I lik
 Plugin 'jeetsukumaran/vim-buffergator'  " Better management of buffers.
 Plugin 'python-mode/python-mode'        " Excellent Python language support.
 Plugin 'Valloric/YouCompleteMe'         " Powerful autocomplete tools
-" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                         " ^^ Better vim status bar.
 Plugin 'jebaum/vim-tmuxify'             " Control Tmux panes from Vim.
 Plugin 'majutsushi/tagbar'              " Show file logical structure.
@@ -38,7 +38,6 @@ Plugin 'tpope/vim-repeat'               " Repeat some more complex actions than 
 Plugin 'tpope/vim-surround'             " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'tpope/tpope-vim-abolish'        " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'           " Adds function arguments as text objects. (Using my own fork.)
-" Plugin 'wlonk/vim-orthodontics'         " Reshape inside braces. (experimental plugin.)
 
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'       " Jinja2 and Nunjucks syntax.
@@ -48,8 +47,10 @@ Plugin 'cespare/vim-toml'               " Syntax for TOML, for Rust and Python p
 " Plugin 'godlygeek/tabular'              " Automatic formatting of Markdown tables.
 " Plugin 'plasticboy/vim-markdown'        " Markdown syntax and tools. MUST come after tabular.
 Plugin 'mxw/vim-jsx'                    " React and JSX.
+Plugin 'leafgarland/typescript-vim'     " TypeScript syntax
 Plugin 'pangloss/vim-javascript'        " JavaScript syntax and tools.
 Plugin 'rust-lang/rust.vim'             " Rust syntax and tools.
+Plugin 'posva/vim-vue'                  " Vue syntax
 
 " Utilities
 Plugin 'alfredodeza/pytest.vim'         " Integration with py.test
@@ -253,11 +254,13 @@ autocmd FileType html.handlebars setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango      setlocal shiftwidth=2 tabstop=2
 autocmd FileType jade            setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript      setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript      setlocal shiftwidth=2 tabstop=2
 autocmd FileType less            setlocal shiftwidth=2 tabstop=2
 autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
+autocmd FileType vue             setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
 
 autocmd FileType rst             setlocal shiftwidth=3 tabstop=3

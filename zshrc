@@ -70,8 +70,9 @@ alias vo="vim -O"
 alias bubu="brew update && brew upgrade && brew cleanup"
 alias vup="vim +PluginInstall! +PluginClean! +qall"
 alias buvu="bubu && vup"
-alias l="ls -lFha"
-alias ll="ls -lFha"
+alias ls='lsd --icon never'
+alias l="ls -laF"
+alias ll="ls -laF"
 alias ffs='sudo !!'
 alias gir="yes doom"
 alias g="hub"
@@ -101,7 +102,7 @@ eval "$(rbenv init -)"
 
 # nvm setup:
 export NVM_DIR=$HOME/.nvm
-# source $(brew --prefix nvm)/nvm.sh
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 if [[ -f .dev-env ]]; then
     source .dev-env
