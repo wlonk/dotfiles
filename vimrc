@@ -39,7 +39,6 @@ Plugin 'wlonk/argtextobj.vim'               " Adds function arguments as text ob
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax.
 Plugin 'Rykka/riv.vim'                      " reStructuredText tools.
-Plugin 'lervag/vimtex'                      " LaTeX
 Plugin 'cespare/vim-toml'                   " Syntax for TOML, for Rust and Python packaging.
 Plugin 'mxw/vim-jsx'                        " React and JSX.
 Plugin 'leafgarland/typescript-vim'         " TypeScript syntax
@@ -48,24 +47,25 @@ Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools.
 Plugin 'posva/vim-vue'                      " Vue syntax
 
 " External Utilities
-Plugin 'alfredodeza/pytest.vim'             " Integration with py.test
 Plugin 'jebaum/vim-tmuxify'                 " Control Tmux panes from Vim.
-Plugin 'mileszs/ack.vim'                    " Search all files in a codebase efficiently.
-Plugin 'racer-rust/vim-racer'               " Auto completion for Rust.
 
 " Plugins for syntaxes I don't currently work with:
 " Plugin 'digitaltoad/vim-pug'                " Syntax highlighting for the Pug templating language.
 " Plugin 'godlygeek/tabular'                  " Automatic formatting of Markdown tables.
+" Plugin 'lervag/vimtex'                      " LaTeX
 " Plugin 'plasticboy/vim-markdown'            " Markdown syntax and tools. MUST come after tabular.
 " Plugin 'mustache/vim-mustache-handlebars'   " Handlebars syntax and tools.
 " Plugin 'wlonk/choicescript.vim'             " Choicescript syntax and tools.
 
 " Plugins I never folded into my workflow:
+" Plugin 'alfredodeza/pytest.vim'             " Integration with py.test
 " Plugin 'alvan/vim-closetag'                 " If I open an HTML tag, I want to close it, alright?
 " Plugin 'christoomey/vim-sort-motion'        " Sort text objects.
 " Plugin 'jmcomets/vim-pony'                  " Utilities for working with Django projects.
 " Plugin 'mattn/emmet-vim'                    " More better HTML writing
 " Plugin 'michaeljsmith/vim-indent-object'    " Add indent objects.
+" Plugin 'mileszs/ack.vim'                    " Search all files in a codebase efficiently.
+" Plugin 'racer-rust/vim-racer'               " Auto completion for Rust.
 " Plugin 'rizzatti/dash.vim'                  " Dash integration (OS X only).
 " Plugin 'tpope/vim-fugitive'                 " Git integration tools.
 call vundle#end()
