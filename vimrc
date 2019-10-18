@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2019-04-01
+" Date:    2019-10-18
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
