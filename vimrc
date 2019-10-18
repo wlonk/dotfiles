@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'                  " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'      " Better management of buffers.
 Plugin 'python-mode/python-mode'            " Excellent Python language support.
-Plugin 'Valloric/YouCompleteMe'             " Powerful autocomplete tools
+Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                             " ^^ Better vim status bar.
 Plugin 'majutsushi/tagbar'                  " Show file logical structure.
@@ -120,7 +120,8 @@ set ttyfast                             " Convince vim it has a fast connection 
 
 " Let's see the line we're on
 set cursorline
-hi CursorLine term=bold cterm=bold guibg=Grey40
+highlight CursorLine term=bold cterm=bold guibg=Grey40
+highlight Comment cterm=italic
 
 """
 augroup vimrcEx
