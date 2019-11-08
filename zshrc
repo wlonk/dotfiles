@@ -11,10 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-
-# Prompt:
-export PROMPT="%(1j.%F{yellow}<%j>%f .)%(12V.%F{242}%12v%f .)%(?.%F{magenta}.%F{red}!)${PURE_PROMPT_SYMBOL:-❯}%f "
-
 setopt autopushd
 
 #--------------------------------------------
@@ -47,7 +43,7 @@ fi
 # Prepend rustup:
 export PATH="$HOME/.cargo/bin:$PATH"
 # Prepend my local bin dir:
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Tmux-Phi:
 _tmux_phi() {
@@ -111,3 +107,6 @@ fi
 if [[ -f .secrets ]]; then
     source .secrets
 fi
+
+
+source "/Users/kit/.local/share/dephell/_dephell_zsh_autocomplete"
