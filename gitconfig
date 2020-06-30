@@ -39,7 +39,7 @@
 
     # Update remotes
     po = push origin
-    pom = push origin master --tags
+    pom = push origin main --tags
     pod = push origin develop
 
     # Requires semver, which is non-standard.

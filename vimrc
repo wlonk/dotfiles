@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'                  " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'      " Better management of buffers.
 Plugin 'python-mode/python-mode'            " Excellent Python language support.
-Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools
+" Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                             " ^^ Better vim status bar.
 Plugin 'majutsushi/tagbar'                  " Show file logical structure.
@@ -30,6 +30,7 @@ Plugin 'MattesGroeger/vim-bookmarks'        " Improve line marks.
 Plugin 'sjl/gundo.vim'                      " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-dispatch'                 " Better :make commands
 Plugin 'tpope/vim-commentary'               " Adds comments as text objects.
+Plugin 'tpope/vim-fugitive'                 " Git integration tools.
 Plugin 'tpope/vim-obsession'                " Save and restore vim sessions easily.
 Plugin 'tpope/vim-repeat'                   " Repeat some more complex actions than basic vim.
 Plugin 'tpope/vim-surround'                 " Manage surrounding quotes, parens, brackets, and braces.
@@ -45,6 +46,10 @@ Plugin 'leafgarland/typescript-vim'         " TypeScript syntax
 Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools.
 Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools.
 Plugin 'posva/vim-vue'                      " Vue syntax
+
+" Prose writing
+Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.
+Plugin 'junegunn/goyo.vim'                  " Distraction-free writing.
 
 " External Utilities
 Plugin 'jebaum/vim-tmuxify'                 " Control Tmux panes from Vim.
@@ -67,7 +72,6 @@ Plugin 'jebaum/vim-tmuxify'                 " Control Tmux panes from Vim.
 " Plugin 'mileszs/ack.vim'                    " Search all files in a codebase efficiently.
 " Plugin 'racer-rust/vim-racer'               " Auto completion for Rust.
 " Plugin 'rizzatti/dash.vim'                  " Dash integration (OS X only).
-" Plugin 'tpope/vim-fugitive'                 " Git integration tools.
 call vundle#end()
 
 " Turn filetype back on now that Vundle is done
@@ -86,7 +90,7 @@ filetype plugin indent on
 """"
 " First, some basics:
 syntax on                               " Enable synax highlighting.
-colorscheme hybrid_reverse              " A color scheme I like.
+colorscheme gruvbox                     " A color scheme I like.
 set autoindent                          " Smart indent on newline.
 set backspace=2                         " More powerful backspace (works on space-tabs).
 set clipboard=unnamed                   " Default to system clipboard.
@@ -122,6 +126,9 @@ set ttyfast                             " Convince vim it has a fast connection 
 set cursorline
 highlight CursorLine term=bold cterm=bold guibg=Grey40
 highlight Comment cterm=italic
+
+" Let's configure limelight to dim inactive paragraphs:
+let g:limelight_conceal_ctermfg = 240
 
 """
 augroup vimrcEx
@@ -253,12 +260,14 @@ autocmd FileType html.handlebars setlocal shiftwidth=2 tabstop=2
 autocmd FileType htmldjango      setlocal shiftwidth=2 tabstop=2
 autocmd FileType jade            setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript      setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript.jsx  setlocal shiftwidth=2 tabstop=2
 autocmd FileType less            setlocal shiftwidth=2 tabstop=2
 autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescript      setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType vue             setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
 
@@ -322,6 +331,10 @@ let g:pymode_folding = 0
 let g:pymode_rope = 0
 autocmd FileType python setlocal completeopt-=preview
 let g:ycm_python_binary_path = 'python'
+
+" When I Goyo, I should also Limelight:
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
 
 " Turn off ycm diagnostics, so we can use leader-d for 'definition':
 let g:ycm_key_detailed_diagnostics = ''
