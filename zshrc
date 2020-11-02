@@ -110,3 +110,5 @@ fi
 
 
 # source "$HOME/.local/share/dephell/_dephell_zsh_autocomplete"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
