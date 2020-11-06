@@ -38,21 +38,22 @@ Plugin 'tpope/tpope-vim-abolish'            " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'               " Adds function arguments as text objects. (Using my own fork.)
 
 " Syntaxes
-Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax.
-Plugin 'Rykka/riv.vim'                      " reStructuredText tools.
-Plugin 'cespare/vim-toml'                   " Syntax for TOML, for Rust and Python packaging.
-Plugin 'mxw/vim-jsx'                        " React and JSX.
+Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax
+Plugin 'Rykka/riv.vim'                      " reStructuredText tools
+Plugin 'cespare/vim-toml'                   " TOML syntax, for Rust and Python packaging
+Plugin 'hashivim/vim-terraform'             " Terraform syntax
 Plugin 'leafgarland/typescript-vim'         " TypeScript syntax
-Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools.
-Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools.
+Plugin 'mxw/vim-jsx'                        " React and JSX
+Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools
 Plugin 'posva/vim-vue'                      " Vue syntax
+Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools
 
 " Prose writing
 Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.
 Plugin 'junegunn/goyo.vim'                  " Distraction-free writing.
 
 " External Utilities
-Plugin 'jebaum/vim-tmuxify'                 " Control Tmux panes from Vim.
+Plugin 'wlonk/vim-tmuxify'                  " My fork to control Tmux panes from Vim.
 
 " Plugins for syntaxes I don't currently work with:
 " Plugin 'digitaltoad/vim-pug'                " Syntax highlighting for the Pug templating language.
@@ -455,7 +456,7 @@ function! SetTestCmd(cmd)
     " This avoids vim-tmuxify asking us if we really wanna scroll down. As we
     " frequently have to scroll up to see the stacktrace of a failing test,
     " this saves us a lot of grief.
-    execute ":nmap <leader><cr> :TxSigInt! \\| TxSend! " . a:cmd . "<cr>"
+    execute ":nmap <leader><cr> :TxUncopy! \\| TxSend! " . a:cmd . "<cr>"
 endfunction
 command! -nargs=1 SetTestCmd call SetTestCmd(<f-args>)
 
