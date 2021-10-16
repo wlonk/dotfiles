@@ -42,8 +42,11 @@ fi
 
 # Prepend rustup:
 export PATH="$HOME/.cargo/bin:$PATH"
+# Prepend itch.io's Butler:
+export PATH="$HOME/Library/Application Support/itch/apps/butler:$PATH"
 # Prepend my local bin dir:
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.roughcast_credentials/roughcast-d258e0da06d9.json
 
 # Tmux-Phi:
 _tmux_phi() {
@@ -72,8 +75,6 @@ alias ll="ls -laF"
 alias ffs='sudo !!'
 alias gir="yes doom"
 alias g="hub"
-alias p="pipenv run python"
-alias pm="pipenv run python manage.py"
 alias tp="tmux-phi"
 alias j="jobs"
 alias h="heroku"
@@ -114,7 +115,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kit.diggeslatouche/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kit.diggeslatouche/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/kit/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kit/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/kit.diggeslatouche/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kit.diggeslatouche/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/kit/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kit/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

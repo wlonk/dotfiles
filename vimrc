@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2019-10-18
+" Date:    2021-10-15
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'                  " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'      " Better management of buffers.
 Plugin 'python-mode/python-mode'            " Excellent Python language support.
-" Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
+Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                             " ^^ Better vim status bar.
 Plugin 'majutsushi/tagbar'                  " Show file logical structure.
