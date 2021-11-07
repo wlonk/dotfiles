@@ -23,31 +23,36 @@ export VIRTUALENV_DISTRIBUTE=1
 export PYTHONDONTWRITEBYTECODE=1
 export DISABLE_AUTO_TITLE=true
 export RUST_SRC_PATH=$HOME/code/libs/rust/src
-# For docker on OS X only:
-# if (( $+commands[docker-machine] )); then
-#     eval $(docker-machine env default 2> /dev/null)
-# fi
-# Burn Java with Fire.
+
+# Burn Java with fire:
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
-# Handle many parallel Python versions through PyEnv
+
+# Set up M1 macOS Homebrew path:
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Handle many parallel Python versions through PyEnv:
 if (( $+commands[pyenv] )); then
     export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
+    export PATH="$PYENV_ROOT/shims:$PATH"
     eval "$(pyenv init -)"
     pyenv virtualenvwrapper_lazy
 fi
-# Set up virtualenvwrapper
-# source $HOME/.pyenv/shims/virtualenvwrapper.sh
 
 # Prepend rustup:
 export PATH="$HOME/.cargo/bin:$PATH"
+
 # Prepend itch.io's Butler:
 export PATH="$HOME/Library/Application Support/itch/apps/butler:$PATH"
+
 # Prepend my local bin dir:
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+
+# Set Google auth for Roughcast:
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.roughcast_credentials/roughcast-d258e0da06d9.json
 
+#--------------------------------------------
 # Tmux-Phi:
 _tmux_phi() {
     local -a commands
@@ -61,6 +66,7 @@ _tmux_phi() {
 }
 compdef _tmux_phi tmux-phi
 
+#--------------------------------------------
 # Aliases:
 alias v="vim"
 alias vi="vim"
@@ -86,21 +92,17 @@ alias today='date "+%Y-%m-%d"'
 alias c='pygmentize -O style=monokai -f console256 -g'  
 alias hd='hexdump -C'
 
-_ssh_auth_save() {
-    SOCK_LINK="$HOME/.ssh/ssh-auth-sock"
-    if [[ -n $SSH_AUTH_SOCK && "$SSH_AUTH_SOCK" != "$SOCK_LINK" ]]; then
-        ln -sf "$SSH_AUTH_SOCK" "$SOCK_LINK"
-    fi
-}
-
-### Switchers: rbenv, nvm
-# rbenv setup:
-eval "$(rbenv init -)"
-
+#--------------------------------------------
 # nvm setup:
 export NVM_DIR=$HOME/.nvm
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 
+# Set up fzf:
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#--------------------------------------------
+# Source secrets:
 if [[ -f .dev-env ]]; then
     source .dev-env
 fi
@@ -108,14 +110,3 @@ fi
 if [[ -f .secrets ]]; then
     source .secrets
 fi
-
-
-# source "$HOME/.local/share/dephell/_dephell_zsh_autocomplete"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kit/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kit/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kit/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kit/Downloads/google-cloud-sdk/completion.zsh.inc'; fi

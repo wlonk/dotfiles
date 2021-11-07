@@ -1,7 +1,0 @@
-bower
-create-react-app
-ember-cli
-eslint
-grunt-cli
-gulp
-npm

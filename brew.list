@@ -1,3 +1,4 @@
+ag
 bat
 cmake
 curl
@@ -9,17 +10,14 @@ git
 httpie
 hub
 jq
-libxml2
-libxlst
 lsd
-openssl
+nvm
 pipx
 postgres
 pwgen
 pyenv
 pyenv-virtualenvwrapper
 rbenv
-the_silver_searcher
 tmux
 tree
 vim
