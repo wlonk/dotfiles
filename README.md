@@ -83,3 +83,10 @@ vup
 
 In `tmux`: `prefix+I` to install plugins.
 
+Enable press-and-hold:
+
+```
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Then restart.
