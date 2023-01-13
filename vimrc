@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2021-10-15
+" Date:    2023-01-13
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -25,7 +25,7 @@ Plugin 'python-mode/python-mode'            " Excellent Python language support.
 Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                             " ^^ Better vim status bar.
-Plugin 'majutsushi/tagbar'                  " Show file logical structure.
+Plugin 'preservim/tagbar'                   " Show file logical structure.
 Plugin 'MattesGroeger/vim-bookmarks'        " Improve line marks.
 Plugin 'sjl/gundo.vim'                      " More powerful navigation of the undo tree.
 Plugin 'tpope/vim-dispatch'                 " Better :make commands
