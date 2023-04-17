@@ -47,6 +47,7 @@ Plugin 'mxw/vim-jsx'                        " React and JSX
 Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools
 Plugin 'posva/vim-vue'                      " Vue syntax
 Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools
+Plugin 'delphinus/vim-firestore'            " Firestore rules
 
 " Prose writing
 Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.

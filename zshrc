@@ -28,6 +28,7 @@ export RUST_SRC_PATH=$HOME/code/libs/rust/src
 export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 
 # Set up M1 macOS Homebrew path:
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Handle many parallel Python versions through PyEnv:
@@ -117,11 +118,13 @@ if [[ -f .secrets ]]; then
     source .secrets
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
+# The next lines update PATH for the Google Cloud SDK.
 if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "$HOME/lib/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/lib/google-cloud-sdk/path.zsh.inc"; fi
 
-# The next line enables shell command completion for gcloud.
+# The next lines enable shell command completion for gcloud.
 if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
+if [ -f "$HOME/lib/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/lib/google-cloud-sdk/completion.zsh.inc"; fi
 
 source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 
