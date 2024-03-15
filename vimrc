@@ -36,6 +36,8 @@ Plugin 'tpope/vim-repeat'                   " Repeat some more complex actions t
 Plugin 'tpope/vim-surround'                 " Manage surrounding quotes, parens, brackets, and braces.
 Plugin 'tpope/tpope-vim-abolish'            " Better smarter replacing.
 Plugin 'wlonk/argtextobj.vim'               " Adds function arguments as text objects. (Using my own fork.)
+Plugin 'godlygeek/tabular'                  " Automatic formatting of Markdown tables.
+Plugin 'plasticboy/vim-markdown'            " Markdown syntax and tools. MUST come after tabular.
 
 " Syntaxes
 Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax
@@ -48,6 +50,7 @@ Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools
 Plugin 'posva/vim-vue'                      " Vue syntax
 Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools
 Plugin 'delphinus/vim-firestore'            " Firestore rules
+Plugin 'mustache/vim-mustache-handlebars'   " Handlebars syntax and tools.
 
 " Prose writing
 Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.
@@ -58,10 +61,7 @@ Plugin 'wlonk/vim-tmuxify'                  " My fork to control Tmux panes from
 
 " Plugins for syntaxes I don't currently work with:
 " Plugin 'digitaltoad/vim-pug'                " Syntax highlighting for the Pug templating language.
-" Plugin 'godlygeek/tabular'                  " Automatic formatting of Markdown tables.
 " Plugin 'lervag/vimtex'                      " LaTeX
-" Plugin 'plasticboy/vim-markdown'            " Markdown syntax and tools. MUST come after tabular.
-" Plugin 'mustache/vim-mustache-handlebars'   " Handlebars syntax and tools.
 " Plugin 'wlonk/choicescript.vim'             " Choicescript syntax and tools.
 
 " Plugins I never folded into my workflow:
