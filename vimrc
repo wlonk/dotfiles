@@ -22,7 +22,7 @@ Plugin 'ervandew/supertab'                  " Generic tab completion.
 Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'      " Better management of buffers.
 Plugin 'python-mode/python-mode'            " Excellent Python language support.
-Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
+" Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
                                             " ^^ Better vim status bar.
 Plugin 'preservim/tagbar'                   " Show file logical structure.
@@ -272,7 +272,6 @@ autocmd FileType typescript      setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType vue             setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml            setlocal shiftwidth=2 tabstop=2
-
 autocmd FileType rst             setlocal shiftwidth=3 tabstop=3
 
 """ Basics:
@@ -339,8 +338,8 @@ autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
 " Turn off ycm diagnostics, so we can use leader-d for 'definition':
-let g:ycm_key_detailed_diagnostics = ''
-nmap <leader>d :YcmCompleter GoTo<cr>
+" let g:ycm_key_detailed_diagnostics = ''
+" nmap <leader>d :YcmCompleter GoTo<cr>
 
 " Custom Python helpers:
 " Insert argskwargs with <c-l>

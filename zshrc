@@ -127,7 +127,3 @@ if [ -f "$HOME/lib/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/lib/goo
 if [ -f "$HOME/.docker/init-zsh.sh" ]; then
     source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 fi
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
