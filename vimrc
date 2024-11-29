@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2023-01-13
+" Date:    2024-11-29
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -40,26 +40,27 @@ Plugin 'godlygeek/tabular'                  " Automatic formatting of Markdown t
 Plugin 'plasticboy/vim-markdown'            " Markdown syntax and tools. MUST come after tabular.
 
 " Syntaxes
-Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax
+Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools
 Plugin 'Rykka/riv.vim'                      " reStructuredText tools
 Plugin 'cespare/vim-toml'                   " TOML syntax, for Rust and Python packaging
 Plugin 'hashivim/vim-terraform'             " Terraform syntax
 Plugin 'leafgarland/typescript-vim'         " TypeScript syntax
-Plugin 'mxw/vim-jsx'                        " React and JSX
-Plugin 'pangloss/vim-javascript'            " JavaScript syntax and tools
-Plugin 'posva/vim-vue'                      " Vue syntax
 Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools
-Plugin 'delphinus/vim-firestore'            " Firestore rules
-Plugin 'mustache/vim-mustache-handlebars'   " Handlebars syntax and tools.
+Plugin 'pedrohdz/vim-yaml-folds'            " YAML folding
 
 " Prose writing
-Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.
-Plugin 'junegunn/goyo.vim'                  " Distraction-free writing.
+" Plugin 'junegunn/limelight.vim'             " Highlights the current paragraph and dims the rest.
+" Plugin 'junegunn/goyo.vim'                  " Distraction-free writing.
 
 " External Utilities
 Plugin 'wlonk/vim-tmuxify'                  " My fork to control Tmux panes from Vim.
 
 " Plugins for syntaxes I don't currently work with:
+" Plugin 'Glench/Vim-Jinja2-Syntax'           " Jinja2 and Nunjucks syntax
+" Plugin 'mxw/vim-jsx'                        " React and JSX
+" Plugin 'posva/vim-vue'                      " Vue syntax
+" Plugin 'delphinus/vim-firestore'            " Firestore rules
+" Plugin 'mustache/vim-mustache-handlebars'   " Handlebars syntax and tools.
 " Plugin 'digitaltoad/vim-pug'                " Syntax highlighting for the Pug templating language.
 " Plugin 'lervag/vimtex'                      " LaTeX
 " Plugin 'wlonk/choicescript.vim'             " Choicescript syntax and tools.
@@ -196,10 +197,10 @@ augroup END
 " Python configuration
 augroup vimrcPython
     autocmd!
-    autocmd FileType python highlight Excess ctermbg=DarkGrey guibg=Black
+    autocmd FileType python highlight Excess ctermfg=black ctermbg=darkmagenta
     " Use a width of 88. This isn't in line with PEP8, but it's in line with
     " Black, and I somewhat prefer it:
-    autocmd FileType python match Excess /\%88v.*/
+    autocmd FileType python match Excess /\%89v.*/
     autocmd FileType python setlocal textwidth=88
     autocmd FileType python set nowrap
     autocmd FileType python nnoremap <leader>= :0,$!yapf<cr>
@@ -254,6 +255,8 @@ let g:mustache_abbreviations = 1
 """"
 " Narrower indents
 " (These don't have to be in an augroup, as repeating them has no effect.)
+" TODO: consider setting 2 to be the default, and make Python use 4, and rst
+"       use 3?
 autocmd FileType css             setlocal shiftwidth=2 tabstop=2
 autocmd FileType eruby           setlocal shiftwidth=2 tabstop=2
 autocmd FileType handlebars.html setlocal shiftwidth=2 tabstop=2
@@ -329,17 +332,19 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_folding = 0
 
 " Let's use Jedi instead of Rope, but turn off the documentation window.
-let g:pymode_rope = 0
-autocmd FileType python setlocal completeopt-=preview
-let g:ycm_python_binary_path = 'python'
-
-" When I Goyo, I should also Limelight:
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
+" XXX: Removing this entirely, since I removed YCM.
+" let g:pymode_rope = 0
+" autocmd FileType python setlocal completeopt-=preview
+" let g:ycm_python_binary_path = 'python'
 " Turn off ycm diagnostics, so we can use leader-d for 'definition':
 " let g:ycm_key_detailed_diagnostics = ''
 " nmap <leader>d :YcmCompleter GoTo<cr>
+
+" When I Goyo, I should also Limelight:
+" XXX: commented out as long as Goyo and Limelight are commented out
+"      themselves.
+" autocmd! User GoyoEnter Limelight
+" autocmd! User GoyoLeave Limelight!
 
 " Custom Python helpers:
 " Insert argskwargs with <c-l>
