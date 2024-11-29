@@ -45,6 +45,7 @@ Plugin 'Rykka/riv.vim'                      " reStructuredText tools
 Plugin 'cespare/vim-toml'                   " TOML syntax, for Rust and Python packaging
 Plugin 'hashivim/vim-terraform'             " Terraform syntax
 Plugin 'leafgarland/typescript-vim'         " TypeScript syntax
+Plugin 'evanleck/vim-svelte'                " Svelte syntax
 Plugin 'rust-lang/rust.vim'                 " Rust syntax and tools
 Plugin 'pedrohdz/vim-yaml-folds'            " YAML folding
 
@@ -271,6 +272,7 @@ autocmd FileType pug             setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby            setlocal shiftwidth=2 tabstop=2
 autocmd FileType sass            setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss            setlocal shiftwidth=2 tabstop=2
+autocmd FileType svelte          setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescript      setlocal shiftwidth=2 tabstop=2
 autocmd FileType typescriptreact setlocal shiftwidth=2 tabstop=2
 autocmd FileType vue             setlocal shiftwidth=2 tabstop=2
