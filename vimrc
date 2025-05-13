@@ -198,13 +198,8 @@ augroup END
 " Python configuration
 augroup vimrcPython
     autocmd!
-    autocmd FileType python highlight Excess ctermfg=black ctermbg=darkmagenta
-    " Use a width of 88. This isn't in line with PEP8, but it's in line with
-    " Black, and I somewhat prefer it:
-    autocmd FileType python match Excess /\%89v.*/
-    autocmd FileType python setlocal textwidth=88
+    autocmd FileType python setlocal textwidth=120
     autocmd FileType python set nowrap
-    autocmd FileType python nnoremap <leader>= :0,$!yapf<cr>
     autocmd FileType python nnoremap <leader>i :!isort -ns %:t %<cr><cr>
     " .pyi is a Python interface file.
     autocmd BufNewFile,BufRead *.pyi set filetype=python

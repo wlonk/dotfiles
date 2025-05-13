@@ -31,6 +31,9 @@ export JAVA_TOOL_OPTIONS='-Djava.awt.headless=true'
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
+# Add maven 3.8 to path:
+export PATH="/Users/kit.diggeslatouche/lib/apache-maven-3.8.8/bin:$PATH"
+
 # Handle many parallel Python versions through PyEnv:
 if (( $+commands[pyenv] )); then
     export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/shims/python3
@@ -127,3 +130,13 @@ if [ -f "$HOME/lib/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/lib/goo
 if [ -f "$HOME/.docker/init-zsh.sh" ]; then
     source $HOME/.docker/init-zsh.sh || true # Added by Docker Desktop
 fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/kit.diggeslatouche/lib/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kit.diggeslatouche/lib/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/kit.diggeslatouche/lib/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kit.diggeslatouche/lib/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
