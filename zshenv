@@ -12,3 +12,4 @@ fi
 
 # Codon compiler path (added by install script)
 export PATH=/Users/kit.diggeslatouche/.codon/bin:$PATH
+. "$HOME/.cargo/env"

@@ -36,8 +36,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'history-substring-search' \
   'contrib-prompt' \
-  'prompt' \
-  'ssh'
+  'prompt'
 
 #
 # Autosuggestions
@@ -194,7 +193,7 @@ zstyle ':prezto:module:python:virtualenv' initialize 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
+# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 #
 # Syntax Highlighting
