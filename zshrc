@@ -53,9 +53,6 @@ export PATH="$HOME/Library/Application Support/itch/apps/butler:$PATH"
 # Prepend my local bin dir:
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# Set Google auth for Roughcast:
-export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.roughcast_credentials/roughcast-d258e0da06d9.json
-
 #--------------------------------------------
 # Tmux-Phi:
 _tmux_phi() {
