@@ -71,6 +71,13 @@
     l = "!. ~/.githelpers && pretty_git_log"
     la = !git l --all
 
+    # Ally Piechowski's meta commands:
+    metachanges =  "!. ~/.githelpers && git_most_changes"
+    metawho =      "!. ~/.githelpers && git_who_made_this"
+    metaclusters = "!. ~/.githelpers && git_bug_clusters"
+    metacommits =  "!. ~/.githelpers && git_commit_frequencies"
+    metafires =    "!. ~/.githelpers && git_firefighting_metric"
+
 [advice]
     detachedHead = true
 

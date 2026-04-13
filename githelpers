@@ -49,3 +49,37 @@ git_checkpoint() {
     git add --all
     git commit --message "wip: $(uuidgen)"
 }
+
+
+# From Ally PIechowski
+# https://piechowski.io/post/git-commands-before-reading-code/
+git_most_changes() {
+    git log --format=format: --name-only --since="1 year ago" \
+        | sort \
+        | uniq -c \
+        | sort -nr \
+        | head -20
+}
+
+git_who_made_this() {
+    git shortlog -sn --no-merges
+}
+
+git_bug_clusters() {
+    git log -i -E --grep="fix|bug|broken" --name-only --format='' \
+        | sort \
+        | uniq -c \
+        | sort -nr \
+        | head -20
+}
+
+git_commit_frequencies() {
+    git log --format='%ad' --date=format:'%Y-%m' \
+        | sort \
+        | uniq -c
+}
+
+git_firefighting_metric() {
+    git log --oneline --since="1 year ago" \
+        | grep -iE 'revert|hotfix|emergency|rollback'
+}
