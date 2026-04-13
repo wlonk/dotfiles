@@ -51,10 +51,17 @@ git_checkpoint() {
 }
 
 
+histogram() {
+    # This takes <int> <value> rows and gives <value> <histo>
+    perl -lane 'print $F[1], "\t", "=" x ($F[0] / 5)'
+}
+
+
 # From Ally PIechowski
 # https://piechowski.io/post/git-commands-before-reading-code/
 git_most_changes() {
     git log --format=format: --name-only --since="1 year ago" \
+        | grep -v '^$' \
         | sort \
         | uniq -c \
         | sort -nr \

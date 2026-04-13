@@ -78,6 +78,12 @@
     metacommits =  "!. ~/.githelpers && git_commit_frequencies"
     metafires =    "!. ~/.githelpers && git_firefighting_metric"
 
+    histchanges =  "!. ~/.githelpers && git_most_changes | histogram"
+    histwho =      "!. ~/.githelpers && git_who_made_this | histogram"
+    histclusters = "!. ~/.githelpers && git_bug_clusters | histogram"
+    histcommits =  "!. ~/.githelpers && git_commit_frequencies | histogram"
+    histfires =    "!. ~/.githelpers && git_firefighting_metric"
+
 [advice]
     detachedHead = true
 
