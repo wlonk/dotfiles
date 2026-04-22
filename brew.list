@@ -5,10 +5,8 @@ curl
 diff-so-fancy
 fd
 fzf
-ghi
 git
 httpie
-hub
 jq
 lsd
 nvm

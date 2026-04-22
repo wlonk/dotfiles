@@ -45,9 +45,6 @@
     # Requires semver, which is non-standard.
     sv = semver-tags
 
-    # for `hub`
-    prq = pull-request
-
     # Checkpoint: save current state with a UUID for a commit message. Commit
     # early, commit often, interactive rebase, push late.
     checkpoint = "!. ~/.githelpers && git_checkpoint"
@@ -107,12 +104,6 @@
 [pager]
     branch = false
 
-[github]
-    user = wlonk
-
-[ghi]
-    token = !security find-internet-password -a wlonk -s github.com -l 'ghi token' -w
-
 [gpg]
     program = /usr/local/MacGPG2/bin/gpg2
 
@@ -121,5 +112,6 @@
 
 [url "ssh://git@github.com/"]
   insteadOf = https://github.com/
+
 [init]
 	defaultBranch = main

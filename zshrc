@@ -83,10 +83,6 @@ alias ll="ls -laF"
 alias ffs='sudo !!'
 alias gir="yes doom"
 
-# Currently, Hub has broken tab completion of git commands and git branches
-# with recent versions of git. See https://github.com/github/hub/issues/2684
-# Until this is fixed, we won't use hub as a wrapper for git.
-# alias g="hub"
 alias g="git"
 
 alias tp="tmux-phi"
