@@ -1,6 +1,6 @@
 " Configuration file for vim
 " Author:  Kit La Touche <kit@transneptune.net>
-" Date:    2024-11-29
+" Date:    2025-09-19
 " Comment: Vim on and love through unrepining hours
 "          Before us lies eternity; our souls
 "          Are vim, and a continual farewell.
@@ -96,6 +96,7 @@ filetype plugin indent on
 syntax on                               " Enable synax highlighting.
 colorscheme gruvbox                     " A color scheme I like.
 set autoindent                          " Smart indent on newline.
+set background=dark                     " Dark mode all the things
 set backspace=2                         " More powerful backspace (works on space-tabs).
 set clipboard=unnamed                   " Default to system clipboard.
 set encoding=utf-8                      " A more elegant encoding for a more civilized age.
@@ -516,7 +517,7 @@ map <silent><leader>gc :call GitCheckpoint()<cr>
 
 " OS X only: copy a markdown buffer to the system clipboard as richtext.
 function! CopyMarkdownAsRichText()
-    let markdown = 'kramdown'
+    let markdown = 'markdown'
     exec ':w !' . markdown .
        \ '| textutil -stdin -inputencoding utf-8 -format html -convert rtf -stdout ' .
        \ '| pbcopy'
