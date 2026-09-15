@@ -19,7 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'             " Show git add/delete/change per line in gutter.
 Plugin 'ctrlpvim/ctrlp.vim'                 " Best way to open files.
 Plugin 'ervandew/supertab'                  " Generic tab completion.
-Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
+" Plugin 'flazz/vim-colorschemes'             " Provides the hybrid color scheme I like.
 Plugin 'jeetsukumaran/vim-buffergator'      " Better management of buffers.
 Plugin 'python-mode/python-mode'            " Excellent Python language support.
 " Plugin 'ycm-core/YouCompleteMe'             " Powerful autocomplete tools, but they keep breaking
@@ -94,7 +94,9 @@ filetype plugin indent on
 """"
 " First, some basics:
 syntax on                               " Enable synax highlighting.
-colorscheme gruvbox                     " A color scheme I like.
+" colorscheme gruvbox                     " A color scheme I like. Temporarily
+                                          " commented out while I explore
+                                          " transparent backgrounds.
 set autoindent                          " Smart indent on newline.
 set background=dark                     " Dark mode all the things
 set backspace=2                         " More powerful backspace (works on space-tabs).
